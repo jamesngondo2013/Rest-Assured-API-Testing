@@ -1,0 +1,13 @@
+<PlaceAddRequest>
+	<location>
+	    <lat>-33.8707750</lat>
+	    <lng>151.1990250</lng>
+   </location>
+   <accuracy>50</accuracy>
+   <name>James Ngondo</name>
+   <phone_number>+3539 990 000</phone_number>
+   <address>Spa Road, Dublin 8, Ireland</address>
+   <type>Bible Store</type>
+   <website>www.jamesngondo.com</website>
+   <language>en_AU</language>
+</PlaceAddRequest>
