@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.james.training.RestAssuredTestingFramework.AppRunnerXMLTest">
+      <class name="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest">
         <methods>
           <include name="getData"/>
-          <include name="getXMLRequestTest"/>
+          <include name="postJsonRequestAddBookaLLFieldsTest" invocation-numbers="0 1 2 3"/>
+          <include name="deleteBookJsonRequestTest"/>
         </methods>
-      </class> <!-- com.james.training.RestAssuredTestingFramework.AppRunnerXMLTest -->
+      </class> <!-- com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

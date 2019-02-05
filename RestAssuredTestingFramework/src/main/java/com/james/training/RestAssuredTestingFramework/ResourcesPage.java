@@ -3,6 +3,7 @@ package com.james.training.RestAssuredTestingFramework;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URI;
 import java.util.Properties;
 
 import org.testng.annotations.BeforeTest;
@@ -72,6 +73,27 @@ public class ResourcesPage {
         String resGet = "/maps/api/place/nearbysearch/xml";
         
         return resGet;
+    }
+    //add book Json
+    public static String addBookPostJsonData ()
+    {
+       String addBook = "Library/Addbook.php";
+       
+        return addBook;
+    }
+    //delete book Json
+    public static String deleteBookJsonData ()
+    {
+       String deleteBook = "Library/DeleteBook.php";
+       
+        return deleteBook;
+    }
+    //get book by either ID or Author Json
+    public static String getBookJsonData(){
+        
+        String getBook = "Library/GetBook.php";
+        
+        return getBook;
     }
    
 }

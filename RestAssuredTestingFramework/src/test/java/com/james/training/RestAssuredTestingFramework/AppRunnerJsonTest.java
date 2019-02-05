@@ -8,13 +8,9 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Properties;
-
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+
 
 
 
@@ -36,7 +32,7 @@ public class AppRunnerJsonTest extends ResourcesPage
         
     }*/
     
-    @Test
+  //  @Test
     public void getJsonRequestTest( )
     {
         RestAssured.baseURI = prop.getProperty("HOST"); //get URI
@@ -55,6 +51,35 @@ public class AppRunnerJsonTest extends ResourcesPage
                     body("results[0].name", equalTo("Sydney")).and().     //traverse the json to get 'name' - otherwise it fails
                     body("results[0].place_id", equalTo("ChIJP3Sa8ziYEmsRUKgyFmh9AQM")).and().
                     header("server", "scaffolding on HTTPServer2");                                                            
+    }
+    
+    @Test
+    public void getJsonRequestExtractAllNamesAndLoggingTest( )
+    {
+        RestAssured.baseURI = prop.getProperty("HOST"); //get URI
+        
+        Response res = given().
+                param("location","-33.8670522,151.1957362").
+                param("radius","500").
+                param("key",prop.getProperty("KEY")).
+                log().all().   //logging
+        when().
+                    get(ResourcesPage.placeGetJsonData()).//get=resource type
+                    
+        then().
+                    assertThat().statusCode(200).and().contentType(ContentType.JSON). //assertion with content-type JSON and stsatus code =200
+                    and().
+                    body("results[0].name", equalTo("Sydney")).and().     //traverse the json to get 'name' - otherwise it fails
+                    body("results[0].place_id", equalTo("ChIJP3Sa8ziYEmsRUKgyFmh9AQM")).and().
+                    header("server", "scaffolding on HTTPServer2").log().all().
+                    extract().response(); 
+        
+        JsonPath js = ReusableMethodsPage.rawToJson(res);
+        int namesArraySize = js.get("results.size()");
+        System.out.println("Number of Place Names: "+ namesArraySize);
+        for (int i = 0; i < namesArraySize; i++) {
+            System.out.println(js.get("results["+i+"].name"));
+        }
     }
    // @Test
     public void postJsonRequestTest( )
