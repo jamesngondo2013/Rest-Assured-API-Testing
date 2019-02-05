@@ -18,7 +18,7 @@ public class AppRunnerMysqlDrivenTest extends ResourcesPage{
 
     private HTTPPayloadPage payload;
 
-   // @Test(dataProvider = "getBookDataDB", dataProviderClass = RestAssuredCommonDataProvider.class, priority = 1)
+  //  @Test(dataProvider = "getBookDataDB", dataProviderClass = RestAssuredCommonDataProvider.class, priority = 1)
       public void postJsonRequestAddBookTest(String isbn, String aisle)
       {    
           System.err.println("Running Test=> "+" "+AppRunnerMysqlDrivenTest.class.getName() + this + " -> on thread [" + Thread.currentThread().getId() + "]");

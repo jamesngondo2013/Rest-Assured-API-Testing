@@ -28,10 +28,6 @@ import excel.data.resource.ReadDataFromExcel;
 public class RestAssuredCommonDataProvider {
     
     private static List<BookDetails> bookDetails;
-    private static ArrayList<String> isbn;
-    private static ArrayList<String> aisle;
-    private static ArrayList<String> bookName;
-    private static ArrayList<String> author;
     private static List<String> bookid;
 
     public static void main (String[] args) throws FileNotFoundException, InvalidFormatException, IOException
@@ -41,13 +37,15 @@ public class RestAssuredCommonDataProvider {
 
     //====================================================
   //This is for MYSQL dataProider - returns ALL items - BOOK-NAME,ISBN, AISLE, AUTHOR
-    @DataProvider(name="getDBDataAllFields",parallel=false)
+    @DataProvider(name="getDBDataAllFields",parallel=true)
     public Object[][] getDBDataAllFields ()
     {
-        isbn = new ArrayList<String>();;
-        aisle = new ArrayList<String>();
-        bookName = new ArrayList<String>();;
-        author = new ArrayList<String>();
+        List<BookDetails> bookDetails;
+        
+        ArrayList<String> isbn = new ArrayList<String>();;
+        ArrayList<String> aisle = new ArrayList<String>();
+        ArrayList<String> bookName = new ArrayList<String>();;
+        ArrayList<String> author = new ArrayList<String>();
         
         Object[][] data;
         
@@ -62,12 +60,12 @@ public class RestAssuredCommonDataProvider {
                 ResultSet rs = stmt.executeQuery("select * FROM automation.bookdata");
                 while (rs.next()) {
                    
-                    String isbn = rs.getString("isbn");
-                    String aisle = rs.getString("aisle");
-                    String book_name = rs.getString("book_name");
-                    String author = rs.getString("author");
+                    String db_isbn = rs.getString("isbn");
+                    String db_aisle = rs.getString("aisle");
+                    String db_book_name = rs.getString("book_name");
+                    String db_author = rs.getString("author");
                     //add books to na list
-                    bookDetails.add(new BookDetails(isbn, aisle,book_name,author));     
+                    bookDetails.add(new BookDetails(db_isbn, db_aisle,db_book_name,db_author));     
                 }
 
             }
@@ -113,11 +111,11 @@ public class RestAssuredCommonDataProvider {
     
     //========================================================
   //This is for MYSQL dataProider - returns ISBN, AISLE
-    @DataProvider(name="getBookDataDB",parallel=false)
+    @DataProvider(name="getBookDataDB",parallel=true)
     public Object[][] getBookDataDB ()
     {
-        isbn = new ArrayList<String>();;
-        aisle = new ArrayList<String>();
+        ArrayList<String> isbn = new ArrayList<String>();;
+        ArrayList<String> aisle = new ArrayList<String>();
       
         Object[][] data;
         
@@ -132,11 +130,11 @@ public class RestAssuredCommonDataProvider {
                 ResultSet rs = stmt.executeQuery("select * FROM automation.bookdata");
                 while (rs.next()) {
                     //get isbn from db
-                    String isbn = rs.getString("isbn");
+                    String db_isbn = rs.getString("isbn");
                     //get aisle from db
-                    String aisle = rs.getString("aisle");
+                    String db_aisle = rs.getString("aisle");
                     //add each book to a list
-                    bookDetails.add(new BookDetails(isbn, aisle));
+                    bookDetails.add(new BookDetails(db_isbn, db_aisle));
                
                 }
 
