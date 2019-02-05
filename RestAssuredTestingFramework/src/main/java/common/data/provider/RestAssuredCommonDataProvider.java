@@ -3,6 +3,8 @@
  */
 package common.data.provider;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -11,10 +13,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.DataProvider;
 
 import com.james.training.RestAssuredTestingFramework.BookDetails;
 import com.james.training.RestAssuredTestingFramework.HTTPPayloadPage;
+
+import excel.data.resource.ReadDataFromExcel;
 
 /**
  * @author james.ngondo
@@ -22,7 +27,6 @@ import com.james.training.RestAssuredTestingFramework.HTTPPayloadPage;
  */
 public class RestAssuredCommonDataProvider {
     
-    private ReadDataFromExcel readExcelData;
     private static List<BookDetails> bookDetails;
     private static ArrayList<String> isbn;
     private static ArrayList<String> aisle;
@@ -30,11 +34,13 @@ public class RestAssuredCommonDataProvider {
     private static ArrayList<String> author;
     private static List<String> bookid;
 
-    public static void main (String[] args)
+    public static void main (String[] args) throws FileNotFoundException, InvalidFormatException, IOException
     {
-       // getBookDataDB ();
+       // getBookExcelData ();
     }
 
+    //====================================================
+  //This is for MYSQL dataProider - returns ALL items - BOOK-NAME,ISBN, AISLE, AUTHOR
     @DataProvider(name="getDBDataAllFields",parallel=false)
     public Object[][] getDBDataAllFields ()
     {
@@ -105,6 +111,8 @@ public class RestAssuredCommonDataProvider {
         return data;
     }
     
+    //========================================================
+  //This is for MYSQL dataProider - returns ISBN, AISLE
     @DataProvider(name="getBookDataDB",parallel=false)
     public Object[][] getBookDataDB ()
     {
@@ -168,12 +176,14 @@ public class RestAssuredCommonDataProvider {
         return data;
     }
     
+    //========================================================
+    //This is for excel data - returns ISBN, AISLE
     @DataProvider(name="getBookExcelData",parallel=true)
-    public Object[][] getBookExcelData ()
+    public Object[][] getBookExcelData () throws FileNotFoundException, InvalidFormatException, IOException
     {
-        readExcelData = new ReadDataFromExcel();
-        ArrayList<String> isbn = readExcelData.excelBookDetails(1);
-        ArrayList<String> aisle = readExcelData.excelBookDetails(2);
+        List<String> isbn = ReadDataFromExcel.getBookDetailFromExcel(0, 1);
+        List<String> aisle = ReadDataFromExcel.getBookDetailFromExcel(0, 2);
+        
         int size = aisle.size();
 
         Object[][] data = new Object[size][2];
@@ -183,6 +193,7 @@ public class RestAssuredCommonDataProvider {
 
             for (int j = 0; j < aisle.size(); j++) {
                 data[j][1] = aisle.get(j).toString();
+                
             }
         }
 
@@ -206,6 +217,36 @@ public class RestAssuredCommonDataProvider {
 
     }
     
+    //======================================================
+    //This is for excel data - returns ISBN, AISLE
+    @DataProvider(name="getAllBookFieldsExcelData",parallel=true)
+    public Object[][] getAllBookFieldsExcelData () throws FileNotFoundException, InvalidFormatException, IOException
+    {
+        List<String> book_name = ReadDataFromExcel.getBookDetailFromExcel(0, 0);
+        List<String> isbn = ReadDataFromExcel.getBookDetailFromExcel(0, 1);
+        List<String> aisle = ReadDataFromExcel.getBookDetailFromExcel(0, 2);
+        List<String> author = ReadDataFromExcel.getBookDetailFromExcel(0, 3);
+        
+        int size = aisle.size();
+
+        Object[][] data = new Object[size][4];
+
+        for (int i = 0; i < isbn.size(); i++) {
+            data[i][0] = isbn.get(i).toString();
+
+            for (int j = 0; j < aisle.size(); j++) {
+                data[j][1] = aisle.get(j).toString();
+                data[j][2] = book_name.get(j).toString();
+                data[j][3] = author.get(j).toString();
+            }
+        }
+
+        return data;
+
+    }
+    
+   //================================================================ 
+  //This is A COMMON delete data provider - returns ALL book IDs
     @DataProvider(name="deleteBookID",parallel=true)
     public Object[][] deleteBookID(){
       // id = new ArrayList<String>();
