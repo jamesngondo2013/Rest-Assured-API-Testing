@@ -18,6 +18,7 @@ import org.testng.annotations.DataProvider;
 
 import com.james.training.RestAssuredTestingFramework.BookDetails;
 import com.james.training.RestAssuredTestingFramework.HTTPPayloadPage;
+import com.james.training.RestAssuredTestingFramework.ResourcesPage;
 
 import excel.data.resource.ReadDataFromExcel;
 
@@ -25,10 +26,21 @@ import excel.data.resource.ReadDataFromExcel;
  * @author james.ngondo
  *
  */
-public class RestAssuredCommonDataProvider {
+public class RestAssuredCommonDataProvider extends ResourcesPage{
     
     private static List<BookDetails> bookDetails;
     private static List<String> bookid;
+    private ReadDataFromExcel excelData;
+    private  Connection con = null;
+    private String url;
+    private String pass;
+    private String root;
+    
+
+    public RestAssuredCommonDataProvider () throws FileNotFoundException, IOException
+    {
+       getData();
+    }
 
     public static void main (String[] args) throws FileNotFoundException, InvalidFormatException, IOException
     {
@@ -38,7 +50,7 @@ public class RestAssuredCommonDataProvider {
     //====================================================
   //This is for MYSQL dataProider - returns ALL items - BOOK-NAME,ISBN, AISLE, AUTHOR
     @DataProvider(name="getDBDataAllFields",parallel=true)
-    public Object[][] getDBDataAllFields ()
+    public Object[][] getDBDataAllFields () throws ClassNotFoundException
     {
         List<BookDetails> bookDetails;
         
@@ -50,10 +62,14 @@ public class RestAssuredCommonDataProvider {
         Object[][] data;
         
         bookDetails = new ArrayList<BookDetails>();
-        Connection con = null;
+        
+        url = prop.getProperty("SQL_URL");
+        pass= prop.getProperty("SQL_PASS");
+        root = prop.getProperty("SQL_ROOT");
+ 
         try {
-            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/automation", "root", "chingotah1980");
-
+            
+            con = (Connection) DriverManager.getConnection(url, root, pass);
             if (con != null) {
                 System.out.println("successfully connected to database...");
                 Statement stmt = con.createStatement();
@@ -120,9 +136,13 @@ public class RestAssuredCommonDataProvider {
         Object[][] data;
         
         bookDetails = new ArrayList<BookDetails>();
-        Connection con = null;
+        
+        url = prop.getProperty("SQL_URL");
+        pass= prop.getProperty("SQL_PASS");
+        root = prop.getProperty("SQL_ROOT");
+
         try {
-            con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/automation", "root", "chingotah1980");
+            con = (Connection) DriverManager.getConnection(url, root, pass);
 
             if (con != null) {
                 System.out.println("successfully connected to database...");
@@ -179,8 +199,10 @@ public class RestAssuredCommonDataProvider {
     @DataProvider(name="getBookExcelData",parallel=true)
     public Object[][] getBookExcelData () throws FileNotFoundException, InvalidFormatException, IOException
     {
-        List<String> isbn = ReadDataFromExcel.getBookDetailFromExcel(0, 1);
-        List<String> aisle = ReadDataFromExcel.getBookDetailFromExcel(0, 2);
+        excelData = new ReadDataFromExcel();
+        
+        List<String> isbn = excelData.getBookDetailFromExcel(0, 1);
+        List<String> aisle = excelData.getBookDetailFromExcel(0, 2);
         
         int size = aisle.size();
 
@@ -220,10 +242,12 @@ public class RestAssuredCommonDataProvider {
     @DataProvider(name="getAllBookFieldsExcelData",parallel=true)
     public Object[][] getAllBookFieldsExcelData () throws FileNotFoundException, InvalidFormatException, IOException
     {
-        List<String> book_name = ReadDataFromExcel.getBookDetailFromExcel(0, 0);
-        List<String> isbn = ReadDataFromExcel.getBookDetailFromExcel(0, 1);
-        List<String> aisle = ReadDataFromExcel.getBookDetailFromExcel(0, 2);
-        List<String> author = ReadDataFromExcel.getBookDetailFromExcel(0, 3);
+        excelData = new ReadDataFromExcel();
+        
+        List<String> book_name = excelData.getBookDetailFromExcel(0, 0);
+        List<String> isbn = excelData.getBookDetailFromExcel(0, 1);
+        List<String> aisle = excelData.getBookDetailFromExcel(0, 2);
+        List<String> author = excelData.getBookDetailFromExcel(0, 3);
         
         int size = aisle.size();
 
