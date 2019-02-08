@@ -26,7 +26,7 @@ public class AppRunnerXMLTest extends ResourcesPage{
             param("key",prop.getProperty("KEY")).
         
         when().
-            get(ResourcesPage.placeXMLGetData()).//get=resource type
+            get(ResourcesPage.placeXMLGetDataResourceURL()).//get=resource type
             
         then().
             assertThat().statusCode(200).and().contentType(ContentType.XML). //assertion with content-type JSON and stsatus code =200
@@ -52,7 +52,7 @@ public class AppRunnerXMLTest extends ResourcesPage{
             param("key",prop.getProperty("KEY")).
         
         when().
-            get(ResourcesPage.placeXMLGetData()).//get=resource type
+            get(ResourcesPage.placeXMLGetDataResourceURL()).//get=resource type
             
         then().
             assertThat().statusCode(200).and().contentType(ContentType.XML). //assertion with content-type JSON and stsatus code =200
@@ -91,7 +91,7 @@ public class AppRunnerXMLTest extends ResourcesPage{
                 body(postData).
                 
         when().
-                post(ResourcesPage.placeXMLPostData()).  
+                post(ResourcesPage.placeXMLPostDataResourceURL()).  
                 
         then().
                 assertThat().statusCode(200).and().contentType(ContentType.XML).and().extract().response(); //extracts the response from the request and place it in 'res'

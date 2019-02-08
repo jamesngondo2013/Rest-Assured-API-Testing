@@ -57,8 +57,48 @@ public class HTTPPayloadPage {
         return payload;
     }
     
+    //Jira Api auth - json payload request
+    public static String JiraAuthPayloadJson(String username, String password)
+    {
+        String authDetails = "{\r\n\r\n\"username\":\""+username+"\",\r\n\"password\": \""+password+"\"\r\n}\r\n";
+        
+        return authDetails;
+    }
     
-   
+    //jira create bug
+    public static String JiraCreateBugPayloadJson(String projectKey, String summary,String desc,String issueType)
+    {
+        String bugPayload = "{"+
+                "\"fields\": {"+
+                "\"project\":{"+
+                   "\"key\": \""+projectKey+"\""+
+                "},"+
+                "\"summary\": \""+summary+"\","+
+                "\"description\": \""+desc+"\","+
+                "\"issuetype\": {"+
+                   "\"name\": \""+issueType+"\""+
+                "}"+
+            "}}";
+        
+        return bugPayload;
+    }
+   //delete Jira
+    //delete book by id - json payload request
+    public static String deleteJiraBugDataPayloadJson(String id)
+    {
+        String body ="{"+
+                "\"id\":\""+id+"\""+                         
+            "}";
+        
+        return body;
+    }
+    public static String addJiraCommentPayloadData (String comment)
+    {
+        String comm = "{"+
+                      "\"body\":\""+comment+"\""+
+                    "}";
+        return comm;
+    }
     
     
    

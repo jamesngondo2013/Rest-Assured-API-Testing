@@ -34,7 +34,7 @@ public class AppRunnerExcelDrivenTest extends ResourcesPage{
                 body(payload.addBookToPayload(isbn,aisle,book_name, author)).
                 
         when().
-                post(ResourcesPage.addBookPostJsonData()).
+                post(ResourcesPage.addBookPostJsonDataResourceURL()).
                 //post("Library/Addbook.php").
                 
         then().
@@ -66,7 +66,7 @@ public class AppRunnerExcelDrivenTest extends ResourcesPage{
               body(payload.addBookToPayload(isbn,aisle)).
               
       when().
-              post(ResourcesPage.addBookPostJsonData()).
+              post(ResourcesPage.addBookPostJsonDataResourceURL()).
               //post("Library/Addbook.php").
               
       then().
@@ -96,7 +96,7 @@ public class AppRunnerExcelDrivenTest extends ResourcesPage{
               body(HTTPPayloadPage.deleteBookDataPayloadJson(bookid)).   //take 'bookid' to the Delete request    
       
       when().
-              post(ResourcesPage.deleteBookJsonData()).
+              post(ResourcesPage.deleteBookJsonDataResourceURL()).
               
       then().
              assertThat().statusCode(200).and().log().all();

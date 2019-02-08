@@ -9,6 +9,9 @@ import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 
 public class ReusableMethodsPage {
+    
+    private static String sessionId;
+    private static String deleteId;
 
     //reads the bytes in the xml file and return a string
     public static String generateStringFromXMLResource(String path) throws IOException{
@@ -35,4 +38,27 @@ public class ReusableMethodsPage {
         JsonPath json=new JsonPath(respon);
         return json;
     }
+
+    public static String getSessionKEY ()
+    {
+        return sessionId;
+    }
+
+    public static void setSessionKEY (String sessionKey)
+    {
+       sessionId = sessionKey;
+        
+    }
+
+    public static String getDeleteId ()
+    {
+        return deleteId;
+    }
+
+    public static void setDeleteId (String deleteId)
+    {
+        ReusableMethodsPage.deleteId = deleteId;
+    }
+    
+    
 }

@@ -3,10 +3,15 @@ package com.james.training.RestAssuredTestingFramework;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URLEncoder;
+import java.util.Base64.Encoder;
 import java.util.Properties;
 
 import org.testng.annotations.BeforeTest;
+
+import io.restassured.config.EncoderConfig;
 
 /**
  * james.ngondo
@@ -28,7 +33,7 @@ public class ResourcesPage {
     }
    
     //POST
-    public static String placePostJsonData(){
+    public static String placePostJsonDataResourceURL(){
         
         String resPost = "/maps/api/place/add/json";
         
@@ -36,7 +41,7 @@ public class ResourcesPage {
     }
     
     //POST XML
-    public static String placeXMLPostData(){
+    public static String placeXMLPostDataResourceURL(){
         
         String resPost = "/maps/api/place/add/xml";
         
@@ -44,7 +49,7 @@ public class ResourcesPage {
     }
     
     //DELETE
-    public static String placeDeleteJsonData(){
+    public static String placeDeleteJsonDataResourceURL(){
         
         String resDelete = "/maps/api/place/delete/json";
         
@@ -52,7 +57,7 @@ public class ResourcesPage {
     }
     
     //DELETE XML
-    public static String placeXMLDeleteData(){
+    public static String placeXMLDeleteDataResourceURL(){
         
         String resDelete = "/maps/api/place/delete/xml";
         
@@ -60,7 +65,7 @@ public class ResourcesPage {
     }
     
     //GET
-    public static String placeGetJsonData(){
+    public static String placeGetJsonDataResourceURL(){
         
         String resGet = "/maps/api/place/nearbysearch/json";
         
@@ -68,32 +73,60 @@ public class ResourcesPage {
     }
     
     //GET XML
-    public static String placeXMLGetData(){
+    public static String placeXMLGetDataResourceURL(){
         
         String resGet = "/maps/api/place/nearbysearch/xml";
         
         return resGet;
     }
     //add book Json
-    public static String addBookPostJsonData ()
+    public static String addBookPostJsonDataResourceURL ()
     {
        String addBook = "Library/Addbook.php";
        
         return addBook;
     }
     //delete book Json
-    public static String deleteBookJsonData ()
+    public static String deleteBookJsonDataResourceURL ()
     {
        String deleteBook = "Library/DeleteBook.php";
        
         return deleteBook;
     }
     //get book by either ID or Author Json
-    public static String getBookJsonData(){
+    public static String getBookJsonDataResourceURL(){
         
         String getBook = "Library/GetBook.php";
         
         return getBook;
+    }
+    public static String getJiraResourceURL(){
+        
+        String url = "/rest/auth/1/session";
+        return url;
+        
+    }
+    
+    public static String postCreateBugJiraResourceURL(){
+        
+        String url = "/rest/api/2/issue";
+        return url;
+        
+    }
+    
+    public static String deleteJiraBugResourceURL(String id){
+        
+        String url = "/rest/api/2/issue/"+id;
+        return url;
+        
+    }
+    
+    public static String addCommentToJiraBugResourceURL(String id){
+        
+           String url = "/rest/api/2/issue/{"+id+"}/comment";
+       
+        return url;
+        
     }
    
 }

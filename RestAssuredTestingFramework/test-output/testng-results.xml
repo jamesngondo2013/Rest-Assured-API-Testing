@@ -1,165 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3094" started-at="2019-02-06T00:14:52Z" finished-at="2019-02-06T00:14:55Z">
+  <suite name="Default suite" duration-ms="1713" started-at="2019-02-08T16:56:29Z" finished-at="2019-02-08T16:56:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3094" started-at="2019-02-06T00:14:52Z" finished-at="2019-02-06T00:14:55Z">
-      <class name="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest">
-        <test-method status="PASS" signature="getData()[pri:0, instance:com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest@5702b3b1]" name="getData" is-config="true" duration-ms="11" started-at="2019-02-06T00:14:52Z" finished-at="2019-02-06T00:14:52Z">
+    <test name="Default test" duration-ms="1713" started-at="2019-02-08T16:56:29Z" finished-at="2019-02-08T16:56:31Z">
+      <class name="com.james.training.JIRA.api.JIRATest">
+        <test-method status="PASS" signature="getData()[pri:0, instance:com.james.training.JIRA.api.JIRATest@25bbe1b6]" name="getData" is-config="true" duration-ms="9" started-at="2019-02-08T16:56:29Z" finished-at="2019-02-08T16:56:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getData -->
-        <test-method status="PASS" signature="postJsonRequestAddBookaLLFieldsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest@5702b3b1]" name="postJsonRequestAddBookaLLFieldsTest" duration-ms="1914" started-at="2019-02-06T00:14:52Z" data-provider="getDBDataAllFields" finished-at="2019-02-06T00:14:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[J198207]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[101]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Rest Assured Testing]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[James Ngondo]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="postJIRAAuthenticationTest()[pri:0, instance:com.james.training.JIRA.api.JIRATest@25bbe1b6]" name="postJIRAAuthenticationTest" duration-ms="1531" started-at="2019-02-08T16:56:29Z" finished-at="2019-02-08T16:56:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postJsonRequestAddBookaLLFieldsTest -->
-        <test-method status="PASS" signature="postJsonRequestAddBookaLLFieldsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest@5702b3b1]" name="postJsonRequestAddBookaLLFieldsTest" duration-ms="1914" started-at="2019-02-06T00:14:52Z" data-provider="getDBDataAllFields" finished-at="2019-02-06T00:14:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[G19811]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[701]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Social Work]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Gilby Gombe]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- postJIRAAuthenticationTest -->
+        <test-method status="PASS" signature="postJiraCreateIssue()[pri:0, instance:com.james.training.JIRA.api.JIRATest@25bbe1b6]" name="postJiraCreateIssue" duration-ms="105" started-at="2019-02-08T16:56:31Z" depends-on-methods="com.james.training.JIRA.api.JIRATest.postJIRAAuthenticationTest" finished-at="2019-02-08T16:56:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postJsonRequestAddBookaLLFieldsTest -->
-        <test-method status="PASS" signature="postJsonRequestAddBookaLLFieldsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest@5702b3b1]" name="postJsonRequestAddBookaLLFieldsTest" duration-ms="1908" started-at="2019-02-06T00:14:52Z" data-provider="getDBDataAllFields" finished-at="2019-02-06T00:14:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[S19801]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[100]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Rest App]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Steve Kawala]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- postJiraCreateIssue -->
+        <test-method status="PASS" signature="deleteJiraJsonRequestTest()[pri:2, instance:com.james.training.JIRA.api.JIRATest@25bbe1b6]" name="deleteJiraJsonRequestTest" duration-ms="45" started-at="2019-02-08T16:56:31Z" depends-on-methods="com.james.training.JIRA.api.JIRATest.postJiraCreateIssue" finished-at="2019-02-08T16:56:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postJsonRequestAddBookaLLFieldsTest -->
-        <test-method status="PASS" signature="postJsonRequestAddBookaLLFieldsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest@5702b3b1]" name="postJsonRequestAddBookaLLFieldsTest" duration-ms="1910" started-at="2019-02-06T00:14:52Z" data-provider="getDBDataAllFields" finished-at="2019-02-06T00:14:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[B19815]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[502]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Abundant Grace]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Bishop Shanks]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postJsonRequestAddBookaLLFieldsTest -->
-        <test-method status="PASS" signature="deleteBookJsonRequestTest(java.lang.String)[pri:2, instance:com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest@5702b3b1]" name="deleteBookJsonRequestTest" duration-ms="583" started-at="2019-02-06T00:14:54Z" data-provider="deleteBookID" depends-on-methods="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest.postJsonRequestAddBookaLLFieldsTest" finished-at="2019-02-06T00:14:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[G19811701]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBookJsonRequestTest -->
-        <test-method status="PASS" signature="deleteBookJsonRequestTest(java.lang.String)[pri:2, instance:com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest@5702b3b1]" name="deleteBookJsonRequestTest" duration-ms="582" started-at="2019-02-06T00:14:54Z" data-provider="deleteBookID" depends-on-methods="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest.postJsonRequestAddBookaLLFieldsTest" finished-at="2019-02-06T00:14:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[S19801100]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBookJsonRequestTest -->
-        <test-method status="PASS" signature="deleteBookJsonRequestTest(java.lang.String)[pri:2, instance:com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest@5702b3b1]" name="deleteBookJsonRequestTest" duration-ms="601" started-at="2019-02-06T00:14:54Z" data-provider="deleteBookID" depends-on-methods="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest.postJsonRequestAddBookaLLFieldsTest" finished-at="2019-02-06T00:14:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[J198207101]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBookJsonRequestTest -->
-        <test-method status="PASS" signature="deleteBookJsonRequestTest(java.lang.String)[pri:2, instance:com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest@5702b3b1]" name="deleteBookJsonRequestTest" duration-ms="582" started-at="2019-02-06T00:14:54Z" data-provider="deleteBookID" depends-on-methods="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest.postJsonRequestAddBookaLLFieldsTest" finished-at="2019-02-06T00:14:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[B19815502]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteBookJsonRequestTest -->
-      </class> <!-- com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest -->
+        </test-method> <!-- deleteJiraJsonRequestTest -->
+      </class> <!-- com.james.training.JIRA.api.JIRATest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

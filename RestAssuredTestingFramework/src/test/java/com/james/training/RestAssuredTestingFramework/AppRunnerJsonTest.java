@@ -43,7 +43,7 @@ public class AppRunnerJsonTest extends ResourcesPage
                 param("key",prop.getProperty("KEY")).
                 
         when().
-                    get(ResourcesPage.placeGetJsonData()).//get=resource type
+                    get(ResourcesPage.placeGetJsonDataResourceURL()).//get=resource type
                     
         then().
                     assertThat().statusCode(200).and().contentType(ContentType.JSON). //assertion with content-type JSON and stsatus code =200
@@ -64,7 +64,7 @@ public class AppRunnerJsonTest extends ResourcesPage
                 param("key",prop.getProperty("KEY")).
                 log().all().   //logging
         when().
-                    get(ResourcesPage.placeGetJsonData()).//get=resource type
+                    get(ResourcesPage.placeGetJsonDataResourceURL()).//get=resource type
                     
         then().
                     assertThat().statusCode(200).and().contentType(ContentType.JSON). //assertion with content-type JSON and stsatus code =200
@@ -96,7 +96,7 @@ public class AppRunnerJsonTest extends ResourcesPage
                 body(payloadBody).
                 
         when().
-                post(ResourcesPage.placePostJsonData()).  
+                post(ResourcesPage.placePostJsonDataResourceURL()).  
                 
         then().
                 assertThat().statusCode(200).and().contentType(ContentType.JSON).and().
@@ -120,7 +120,7 @@ public class AppRunnerJsonTest extends ResourcesPage
                 body(HTTPPayloadPage.getDeleteDataPayloadJson(placeid)).   //take 'placeid' to the Delete request    
         
         when().
-                post(ResourcesPage.placeDeleteJsonData()).
+                post(ResourcesPage.placeDeleteJsonDataResourceURL()).
                 
         then().
                assertThat().statusCode(200).and().contentType(ContentType.JSON).and().

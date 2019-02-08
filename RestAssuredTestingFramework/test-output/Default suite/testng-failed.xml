@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.james.training.RestAssuredExcelDrivenTestingFramework.AppRunnerExcelDrivenTest">
+      <class name="com.james.training.JIRA.api.JIRATest">
         <methods>
-          <include name="postJsonRequestAddAllBookFieldsTest"/>
           <include name="getData"/>
-          <include name="deleteBookJsonRequestTest"/>
+          <include name="postJIRAAuthenticationTest"/>
+          <include name="postJiraCreateIssue"/>
+          <include name="addCommentJiraJsonRequestTest"/>
         </methods>
-      </class> <!-- com.james.training.RestAssuredExcelDrivenTestingFramework.AppRunnerExcelDrivenTest -->
+      </class> <!-- com.james.training.JIRA.api.JIRATest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
