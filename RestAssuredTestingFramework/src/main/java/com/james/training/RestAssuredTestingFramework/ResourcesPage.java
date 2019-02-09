@@ -123,10 +123,36 @@ public class ResourcesPage {
     
     public static String addCommentToJiraBugResourceURL(String id){
         
-           String url = "/rest/api/2/issue/{"+id+"}/comment";
+           String url = "/rest/api/2/issue/{"+id+"}/comment";// "/rest/api/2/issue/10030/comment"
        
         return url;
         
+    }
+    
+    public static String updateCommentJiraBugResourceURL(String jiraID){
+        
+        String url = "/rest/api/2/issue/"+jiraID+"/comment/{commentid}";
+        System.out.println("RESOURCES URL: "+url);
+     
+     return url;
+     
+    }
+    public static String getTweetResourceURL(){
+        String url = "/home_timeline.json";
+        return url;
+        
+    }
+
+    public static String postTweetResourceURL ()
+    {
+       String url = "/update.json";
+        return url;
+    }
+    
+    public static String deleteTweetResourceURL (String tweet_id)
+    {
+       String url = "/destroy/"+tweet_id+".json";
+        return url;
     }
    
 }

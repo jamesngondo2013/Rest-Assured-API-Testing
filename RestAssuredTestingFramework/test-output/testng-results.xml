@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1713" started-at="2019-02-08T16:56:29Z" finished-at="2019-02-08T16:56:31Z">
+  <suite name="Default suite" duration-ms="2516" started-at="2019-02-09T19:22:10Z" finished-at="2019-02-09T19:22:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1713" started-at="2019-02-08T16:56:29Z" finished-at="2019-02-08T16:56:31Z">
-      <class name="com.james.training.JIRA.api.JIRATest">
-        <test-method status="PASS" signature="getData()[pri:0, instance:com.james.training.JIRA.api.JIRATest@25bbe1b6]" name="getData" is-config="true" duration-ms="9" started-at="2019-02-08T16:56:29Z" finished-at="2019-02-08T16:56:29Z">
+    <test name="Default test" duration-ms="2516" started-at="2019-02-09T19:22:10Z" finished-at="2019-02-09T19:22:12Z">
+      <class name="com.james.training.tweeter.api.TweeterApiTest">
+        <test-method status="PASS" signature="getData()[pri:0, instance:com.james.training.tweeter.api.TweeterApiTest@3159c4b8]" name="getData" is-config="true" duration-ms="10" started-at="2019-02-09T19:22:10Z" finished-at="2019-02-09T19:22:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getData -->
-        <test-method status="PASS" signature="postJIRAAuthenticationTest()[pri:0, instance:com.james.training.JIRA.api.JIRATest@25bbe1b6]" name="postJIRAAuthenticationTest" duration-ms="1531" started-at="2019-02-08T16:56:29Z" finished-at="2019-02-08T16:56:31Z">
+        <test-method status="PASS" signature="getTweetOAuthTest()[pri:0, instance:com.james.training.tweeter.api.TweeterApiTest@3159c4b8]" name="getTweetOAuthTest" duration-ms="1892" started-at="2019-02-09T19:22:10Z" finished-at="2019-02-09T19:22:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postJIRAAuthenticationTest -->
-        <test-method status="PASS" signature="postJiraCreateIssue()[pri:0, instance:com.james.training.JIRA.api.JIRATest@25bbe1b6]" name="postJiraCreateIssue" duration-ms="105" started-at="2019-02-08T16:56:31Z" depends-on-methods="com.james.training.JIRA.api.JIRATest.postJIRAAuthenticationTest" finished-at="2019-02-08T16:56:31Z">
+        </test-method> <!-- getTweetOAuthTest -->
+        <test-method status="PASS" signature="postTweetOAuthTest()[pri:0, instance:com.james.training.tweeter.api.TweeterApiTest@3159c4b8]" name="postTweetOAuthTest" duration-ms="597" started-at="2019-02-09T19:22:11Z" finished-at="2019-02-09T19:22:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postJiraCreateIssue -->
-        <test-method status="PASS" signature="deleteJiraJsonRequestTest()[pri:2, instance:com.james.training.JIRA.api.JIRATest@25bbe1b6]" name="deleteJiraJsonRequestTest" duration-ms="45" started-at="2019-02-08T16:56:31Z" depends-on-methods="com.james.training.JIRA.api.JIRATest.postJiraCreateIssue" finished-at="2019-02-08T16:56:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteJiraJsonRequestTest -->
-      </class> <!-- com.james.training.JIRA.api.JIRATest -->
+        </test-method> <!-- postTweetOAuthTest -->
+      </class> <!-- com.james.training.tweeter.api.TweeterApiTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

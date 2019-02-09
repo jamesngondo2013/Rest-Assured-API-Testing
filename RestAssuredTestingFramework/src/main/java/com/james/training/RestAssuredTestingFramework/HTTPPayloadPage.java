@@ -94,9 +94,7 @@ public class HTTPPayloadPage {
     }
     public static String addJiraCommentPayloadData (String comment)
     {
-        String comm = "{"+
-                      "\"body\":\""+comment+"\""+
-                    "}";
+        String comm = "{ \"body\":\""+comment+"\"," + "\"visibility\": {" + "\"type\": \"role\"," + "\"value\": \"Administrators\" }" + "}";
         return comm;
     }
     

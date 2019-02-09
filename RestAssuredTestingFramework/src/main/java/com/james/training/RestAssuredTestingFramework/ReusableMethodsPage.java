@@ -11,7 +11,9 @@ import io.restassured.response.Response;
 public class ReusableMethodsPage {
     
     private static String sessionId;
-    private static String deleteId;
+    private static String jiraId;
+    private static String commentId;
+    private static String tweetId;
 
     //reads the bytes in the xml file and return a string
     public static String generateStringFromXMLResource(String path) throws IOException{
@@ -50,14 +52,37 @@ public class ReusableMethodsPage {
         
     }
 
-    public static String getDeleteId ()
+    public static String getJiraId ()
     {
-        return deleteId;
+        return jiraId;
     }
 
-    public static void setDeleteId (String deleteId)
+    public static void setJiraId (String jiraId)
     {
-        ReusableMethodsPage.deleteId = deleteId;
+        ReusableMethodsPage.jiraId = jiraId;
+    }
+
+    public static void setCommentID (String commentID)
+    {
+        ReusableMethodsPage.commentId =commentID;
+        
+    }
+    
+    public static String getCommentId ()
+    {
+        return commentId;
+    }
+
+    public static void setTweetID (String tweet_id)
+    {
+       ReusableMethodsPage.tweetId = tweet_id;
+        
+    }
+    
+    public static String getTweetID ()
+    {
+       return tweetId;
+        
     }
     
     
