@@ -70,8 +70,7 @@ public class TweeterApiTest extends ResourcesPage{
         System.out.println("GET TWEET: " +tweet_text);
         System.out.println("GET TWEET ID: " +tweet_id);
        
-    }
-    
+    }   
     
   //  @Test(dependsOnMethods = "postTweetOAuthTest")
     public void deleteTweetOAuthTest()

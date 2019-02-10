@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2516" started-at="2019-02-09T19:22:10Z" finished-at="2019-02-09T19:22:12Z">
+  <suite name="Default suite" duration-ms="1882" started-at="2019-02-10T20:57:42Z" finished-at="2019-02-10T20:57:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2516" started-at="2019-02-09T19:22:10Z" finished-at="2019-02-09T19:22:12Z">
-      <class name="com.james.training.tweeter.api.TweeterApiTest">
-        <test-method status="PASS" signature="getData()[pri:0, instance:com.james.training.tweeter.api.TweeterApiTest@3159c4b8]" name="getData" is-config="true" duration-ms="10" started-at="2019-02-09T19:22:10Z" finished-at="2019-02-09T19:22:10Z">
+    <test name="Default test" duration-ms="1882" started-at="2019-02-10T20:57:42Z" finished-at="2019-02-10T20:57:43Z">
+      <class name="com.james.training.JIRA.api.CreateJIRAIssueTest">
+        <test-method status="PASS" signature="getData()[pri:0, instance:com.james.training.JIRA.api.CreateJIRAIssueTest@3159c4b8]" name="getData" is-config="true" duration-ms="10" started-at="2019-02-10T20:57:42Z" finished-at="2019-02-10T20:57:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getData -->
-        <test-method status="PASS" signature="getTweetOAuthTest()[pri:0, instance:com.james.training.tweeter.api.TweeterApiTest@3159c4b8]" name="getTweetOAuthTest" duration-ms="1892" started-at="2019-02-09T19:22:10Z" finished-at="2019-02-09T19:22:11Z">
+        <test-method status="PASS" signature="postJIRAAuthenticationTest()[pri:0, instance:com.james.training.JIRA.api.CreateJIRAIssueTest@3159c4b8]" name="postJIRAAuthenticationTest" duration-ms="1474" started-at="2019-02-10T20:57:42Z" finished-at="2019-02-10T20:57:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getTweetOAuthTest -->
-        <test-method status="PASS" signature="postTweetOAuthTest()[pri:0, instance:com.james.training.tweeter.api.TweeterApiTest@3159c4b8]" name="postTweetOAuthTest" duration-ms="597" started-at="2019-02-09T19:22:11Z" finished-at="2019-02-09T19:22:12Z">
+        </test-method> <!-- postJIRAAuthenticationTest -->
+        <test-method status="PASS" signature="JiraAPIUpdateComment()[pri:0, instance:com.james.training.JIRA.api.CreateJIRAIssueTest@3159c4b8]" name="JiraAPIUpdateComment" duration-ms="165" started-at="2019-02-10T20:57:43Z" depends-on-methods="com.james.training.JIRA.api.CreateJIRAIssueTest.postJIRAAuthenticationTest" finished-at="2019-02-10T20:57:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postTweetOAuthTest -->
-      </class> <!-- com.james.training.tweeter.api.TweeterApiTest -->
+        </test-method> <!-- JiraAPIUpdateComment -->
+        <test-method status="PASS" signature="postJiraCreateIssue()[pri:0, instance:com.james.training.JIRA.api.CreateJIRAIssueTest@3159c4b8]" name="postJiraCreateIssue" duration-ms="119" started-at="2019-02-10T20:57:43Z" depends-on-methods="com.james.training.JIRA.api.CreateJIRAIssueTest.postJIRAAuthenticationTest" finished-at="2019-02-10T20:57:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postJiraCreateIssue -->
+        <test-method status="PASS" signature="JiraAPICreateNewComment()[pri:1, instance:com.james.training.JIRA.api.CreateJIRAIssueTest@3159c4b8]" name="JiraAPICreateNewComment" duration-ms="92" started-at="2019-02-10T20:57:43Z" depends-on-methods="com.james.training.JIRA.api.CreateJIRAIssueTest.postJiraCreateIssue" finished-at="2019-02-10T20:57:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- JiraAPICreateNewComment -->
+      </class> <!-- com.james.training.JIRA.api.CreateJIRAIssueTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -26,6 +26,7 @@ import io.restassured.response.Response;
  */
 public class CreateJIRAIssueTest extends ResourcesPage{
 
+    //create session and save it
     @Test
     public void postJIRAAuthenticationTest()
     {    
@@ -86,24 +87,26 @@ public class CreateJIRAIssueTest extends ResourcesPage{
         ReusableMethodsPage.setJiraId(id);
         System.out.println("Issue Created with ID: " +id);
                               
-    }
+    }  
     
-  //  @Test(dependsOnMethods = "postJiraCreateIssue", priority = 1)
+    @Test(dependsOnMethods = "postJiraCreateIssue", priority = 1)
     public void JiraAPICreateNewComment ()
     {
         String comment = "Inserting comment from the automation code";
+        
+        String jiraid = ReusableMethodsPage.getJiraId();
 
         RestAssured.baseURI = prop.getProperty("JIRA_LOCALHOST");
         
         Response res = given().header("Content-Type", "application/json").
                 
                                 header("Cookie", ReusableMethodsPage.getSessionKEY()).log().all().
-                                
-                                body(HTTPPayloadPage.addJiraCommentPayloadData(comment)).log().all().
+                                pathParam("jiraid",jiraid).
+                                body(HTTPPayloadPage.addJiraCommentPayloadData(comment)).
                        when().
-                               post(ResourcesPage.addCommentToJiraBugResourceURL(ReusableMethodsPage.getJiraId())).
+                               post(ResourcesPage.addCommentToJiraBugResourceURL()). // id comes from new jira created
                        then().
-                               statusCode(201).extract().response();
+                               statusCode(201).extract().response(); 
         
         JsonPath js= ReusableMethodsPage.rawToJson(res);
         String commentId=js.get("id");
@@ -112,13 +115,13 @@ public class CreateJIRAIssueTest extends ResourcesPage{
 
     }
     
-   // @Test(dependsOnMethods = "JiraAPICreateNewComment", priority = 2)
+    @Test(dependsOnMethods = "postJIRAAuthenticationTest")
     public void JiraAPIUpdateComment ()
     {
       //Jira Issue id=10030
       //Jira comment id = 10002     "/rest/api/2/issue/10030/comment/10002"
-        String comment ="Updated version 1 of this defect";
-        String jiraID = "10030";
+        String comment ="Updated version 2 test of this defect 10/02/2019";
+        String jiraID = "10030"; 
         String commentID = "10002";
 
         RestAssured.baseURI = prop.getProperty("JIRA_LOCALHOST");
@@ -127,14 +130,18 @@ public class CreateJIRAIssueTest extends ResourcesPage{
                 
                                 header("Cookie", ReusableMethodsPage.getSessionKEY()).log().all().
                                 
-                                pathParams("commentid",ReusableMethodsPage.getCommentId()).
+                                pathParams("commentid","10002").
                                 
                                 body(HTTPPayloadPage.addJiraCommentPayloadData(comment)).
                      when().
-                                put(ResourcesPage.updateCommentJiraBugResourceURL(ReusableMethodsPage.getJiraId())).
+                                                                                             // "/rest/api/2/issue/10030/comment/10002"
+                                put(ResourcesPage.updateCommentJiraBugResourceURL(jiraID)). //takes i jira-id , comment-id
                      then().
                                 statusCode(200).extract().response();
-                               
+                            
+                                
+                                
+        
         JsonPath js= ReusableMethodsPage.rawToJson(res);
         String id=js.get("id");
         System.out.println("Comment ID: " +id); 

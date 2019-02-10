@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+     <!--  <class name="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest"/>
+      <class name="com.james.training.RestAssuredTestingFramework.AppRunnerJsonTest"/>
+      <class name="com.james.training.JIRA.api.CreateJIRAIssueTest"/>
+      <class name="com.james.training.tweeter.api.TweeterApiTest"/>
+      <class name="com.james.training.JIRA.api.UpdateJiraComment"/>
+      <class name="com.james.training.RestAssuredTestingFramework.AppRunnerXMLTest"/> -->
+      <class name="com.james.training.RestAssuredExcelDrivenTestingFramework.AppRunnerExcelDrivenTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

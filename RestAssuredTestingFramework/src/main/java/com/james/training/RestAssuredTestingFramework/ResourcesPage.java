@@ -121,9 +121,9 @@ public class ResourcesPage {
         
     }
     
-    public static String addCommentToJiraBugResourceURL(String id){
+    public static String addCommentToJiraBugResourceURL(){
         
-           String url = "/rest/api/2/issue/{"+id+"}/comment";// "/rest/api/2/issue/10030/comment"
+           String url = "/rest/api/2/issue/{jiraid}/comment";// "/rest/api/2/issue/10030/comment"
        
         return url;
         

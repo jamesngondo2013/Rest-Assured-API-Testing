@@ -49,15 +49,18 @@ public class UpdateJiraComment extends ResourcesPage{
     public void JiraAPICreateNewComment ()
     {
         String comment = "Inserting comment from the automation code";
+        
+        String jiraid = ReusableMethodsPage.getJiraId();
 
         RestAssured.baseURI = prop.getProperty("JIRA_LOCALHOST");
         
         Response res = given().header("Content-Type", "application/json").
                 
                                 header("Cookie", ReusableMethodsPage.getSessionKEY()).log().all().
+                                pathParam("jiraid",jiraid).
                                 body(HTTPPayloadPage.addJiraCommentPayloadData(comment)).
                        when().
-                               post("/rest/api/2/issue/10102/comment"). // id comes from new jira created
+                               post(ResourcesPage.addCommentToJiraBugResourceURL()). // id comes from new jira created
                        then().
                                statusCode(201).extract().response(); 
         
