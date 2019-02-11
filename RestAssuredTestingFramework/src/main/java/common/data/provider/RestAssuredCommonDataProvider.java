@@ -196,7 +196,7 @@ public class RestAssuredCommonDataProvider extends ResourcesPage{
     
     //========================================================
     //This is for excel data - returns ISBN, AISLE
-    @DataProvider(name="getBookExcelData",parallel=true)
+    @DataProvider(name="getBookExcelData",parallel=false)
     public Object[][] getBookExcelData () throws FileNotFoundException, InvalidFormatException, IOException
     {
         excelData = new ReadDataFromExcel();
@@ -239,7 +239,7 @@ public class RestAssuredCommonDataProvider extends ResourcesPage{
     
     //======================================================
     //This is for excel data - returns ISBN, AISLE
-    @DataProvider(name="getAllBookFieldsExcelData",parallel=true)
+    @DataProvider(name="getAllBookFieldsExcelData",parallel=false)
     public Object[][] getAllBookFieldsExcelData () throws FileNotFoundException, InvalidFormatException, IOException
     {
         excelData = new ReadDataFromExcel();

@@ -27,7 +27,8 @@ public class ResourcesPage {
     public void getData() throws IOException, FileNotFoundException{
         
         prop = new Properties();
-        fis = new FileInputStream("C:\\Users\\I350380\\workspace\\RestAssuredTestingFramework\\src\\main\\java\\com\\config\\files\\config.properties");
+       // fis = new FileInputStream("C:\\Users\\I350380\\workspace\\RestAssuredTestingFramework\\src\\main\\java\\com\\config\\files\\config.properties");
+        fis = new FileInputStream(System.getProperty("user.dir")+"//config.properties");
         prop.load(fis);
         
     }
