@@ -9,34 +9,22 @@
 
   <name>RestAssuredTestingFramework</name>
   <url>http://maven.apache.org</url>
-	
+ 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  <profiles>
-  	<profile>
-  	<id>regression</id>
-  		 <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.20.1</version>
-          <configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>/suite/testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
-  	</profile>
-  	
+
+  	<profiles>
   	<profile>
   	<id>smoke</id>
-  		 <build>
+    <build>
+    	 <resources>  
+    <resource>
+        <directory>src/main/java/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+      </resources>
+    	
     <pluginManagement>
       <plugins>
         <plugin>
@@ -55,32 +43,99 @@
   	</profile>
   </profiles>
   
-
   <dependencies>
+  
+  	<dependency>
+	  <groupId>org.testng</groupId>
+	  <artifactId>testng</artifactId>
+	  <version>6.1.1</version>
+  </dependency>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
     <dependency>
-	  <groupId>org.apache.poi</groupId>
-	  <artifactId>poi-ooxml</artifactId>
-	  <version>3.15</version>
+		  <groupId>org.apache.poi</groupId>
+		  <artifactId>poi-ooxml</artifactId>
+		  <version>3.15</version>
 	</dependency> 
+	
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-api</artifactId>
+	    <version>2.9.1</version>
+    </dependency>
+  
+    <dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-core</artifactId>
+	    <version>2.9.1</version>
+   </dependency>
+   
+	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+	<dependency>
+	    <groupId>com.aventstack</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>3.0.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.relevantcodes</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>2.41.2</version>
+	</dependency>
+	
+	<dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>3.0.2</version>
+      <scope>test</scope>
+	</dependency>
+	
+	<dependency>
+	      <groupId>io.rest-assured</groupId>
+	      <artifactId>json-path</artifactId>
+	      <version>3.0.2</version>
+	</dependency>
+	
+	<dependency>
+	      <groupId>io.rest-assured</groupId>
+	      <artifactId>xml-path</artifactId>
+	      <version>3.0.2</version>
+	</dependency>
+	
+	<dependency>
+	      <groupId>io.rest-assured</groupId>
+	      <artifactId>json-schema-validator</artifactId>
+	      <version>3.0.2</version>
+	      <scope>test</scope>
+	</dependency>
+	
 	<!-- https://mvnrepository.com/artifact/com.github.scribejava/scribejava-core -->
-	<!-- <dependency>
+	<dependency>
 	    <groupId>com.github.scribejava</groupId>
 	    <artifactId>scribejava-core</artifactId>
 	    <version>2.5.3</version>
 	</dependency>
-	https://mvnrepository.com/artifact/com.github.scribejava/scribejava-apis
+	
 	<dependency>
 	    <groupId>com.github.scribejava</groupId>
 	    <artifactId>scribejava-apis</artifactId>
 	    <version>2.5.3</version>
-	</dependency> -->
-
+	</dependency> 
 	
-  </dependencies>
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.4</version>
+	</dependency>
+	
+	
+</dependencies>
+		
 </project>
