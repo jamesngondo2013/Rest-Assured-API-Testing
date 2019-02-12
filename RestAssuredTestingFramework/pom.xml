@@ -18,12 +18,12 @@
   	<profile>
   	<id>smoke</id>
     <build>
-    	 <resources>  
+   <resources>  
     <resource>
         <directory>src/main/java/resources</directory>
         <filtering>true</filtering>
       </resource>
-      </resources>
+    </resources>
     	
     <pluginManagement>
       <plugins>
@@ -33,7 +33,7 @@
           <version>2.20.1</version>
           <configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>restAssuredMYSQLTestingSuite.xml</suiteXmlFile>
+						<suiteXmlFile>restAssuredEXCELTestingSuite.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
         </plugin>
@@ -134,6 +134,14 @@
 	    <artifactId>mysql-connector-java</artifactId>
 	    <version>5.1.4</version>
 	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.47</version>
+	</dependency>
+	
 	
 	
 </dependencies>
