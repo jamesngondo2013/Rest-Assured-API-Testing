@@ -24,7 +24,7 @@ public class ResourcesPage {
     protected FileInputStream fis;
     
     @BeforeTest
-    public void getData() throws IOException, FileNotFoundException{
+    public void getDataconfigProperties() throws IOException, FileNotFoundException{
         
         prop = new Properties();
        // fis = new FileInputStream("C:\\Users\\I350380\\workspace\\RestAssuredTestingFramework\\src\\main\\java\\com\\config\\files\\config.properties");

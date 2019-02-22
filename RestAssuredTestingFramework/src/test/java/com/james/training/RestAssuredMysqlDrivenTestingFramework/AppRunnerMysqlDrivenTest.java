@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.given;
 import org.testng.annotations.Test;
 
 import com.james.training.RestAssuredTestingFramework.BookDetails;
+import com.james.training.RestAssuredTestingFramework.GetDataFromConfigProperties;
 import com.james.training.RestAssuredTestingFramework.HTTPPayloadPage;
 import com.james.training.RestAssuredTestingFramework.ResourcesPage;
 import com.james.training.RestAssuredTestingFramework.ReusableMethodsPage;
@@ -14,7 +15,7 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class AppRunnerMysqlDrivenTest extends ResourcesPage{
+public class AppRunnerMysqlDrivenTest extends GetDataFromConfigProperties{
 
     private HTTPPayloadPage payload;
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)" preserve-order="false">
+    <classes>
+      <class name="com.james.training.RestAssuredTestingFramework.AppRunnerXMLTest">
+        <methods>
+          <include name="getData"/>
+        </methods>
+      </class>
+      <class name="com.james.training.RestAssuredTestingFramework.AppRunnerJsonTest">
+        <methods>
+          <include name="getJsonRequestExtractAllNamesAndLoggingTest"/>
+        </methods>
+      </class>
+      <class name="com.james.training.tweeter.api.TweeterApiTest">
+        <methods>
+          <include name="postTweetOAuthTest"/>
+          <include name="getTweetOAuthTest"/>
+        </methods>
+      </class>
+      <class name="com.james.training.JIRA.api.CreateJIRAIssueTest">
+        <methods>
+          <include name="JiraAPIUpdateComment"/>
+          <include name="postJiraCreateIssue"/>
+          <include name="postJIRAAuthenticationTest"/>
+          <include name="JiraAPICreateNewComment"/>
+        </methods>
+      </class>
+      <class name="com.james.training.RestAssuredExcelDrivenTestingFramework.AppRunnerExcelDrivenTest">
+        <methods>
+          <include name="postJsonRequestAddAllBookFieldsTest"/>
+          <include name="deleteBookJsonRequestTest"/>
+        </methods>
+      </class>
+      <class name="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest">
+        <methods>
+          <include name="postJsonRequestAddBookaLLFieldsTest"/>
+          <include name="deleteBookJsonRequestTest"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

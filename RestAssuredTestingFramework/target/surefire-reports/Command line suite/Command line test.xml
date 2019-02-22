@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="DUBN33945389A" name="com.james.training.JIRA.api.CreateJIRAIssueTest" tests="12" failures="4" timestamp="12 Feb 2019 13:31:02 GMT" time="2.225" errors="0">
+  <testcase name="postJIRAAuthenticationTest" time="0.001" classname="com.james.training.JIRA.api.CreateJIRAIssueTest">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at com.james.training.JIRA.api.CreateJIRAIssueTest.postJIRAAuthenticationTest(CreateJIRAIssueTest.java:35)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+... Removed 26 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="JiraAPIUpdateComment" time="0.001" classname="com.james.training.JIRA.api.CreateJIRAIssueTest">
+    <skipped/>
+  </testcase>
+  <testcase name="postJiraCreateIssue" time="0.0" classname="com.james.training.JIRA.api.CreateJIRAIssueTest">
+    <skipped/>
+  </testcase>
+  <testcase name="JiraAPICreateNewComment" time="0.001" classname="com.james.training.JIRA.api.CreateJIRAIssueTest">
+    <skipped/>
+  </testcase>
+  <testcase name="postJsonRequestAddAllBookFieldsTest" time="0.004" classname="com.james.training.RestAssuredExcelDrivenTestingFramework.AppRunnerExcelDrivenTest">
+    <skipped/>
+  </testcase>
+  <testcase name="deleteBookJsonRequestTest" time="0.0" classname="com.james.training.RestAssuredExcelDrivenTestingFramework.AppRunnerExcelDrivenTest">
+    <skipped/>
+  </testcase>
+  <testcase name="postJsonRequestAddBookaLLFieldsTest" time="0.0" classname="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest">
+    <skipped/>
+  </testcase>
+  <testcase name="deleteBookJsonRequestTest" time="0.0" classname="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest">
+    <skipped/>
+  </testcase>
+  <testcase name="getXMLRequestAllNamesArrayTest" time="2.195" classname="com.james.training.RestAssuredTestingFramework.AppRunnerXMLTest"/>
+  <testcase name="postTweetOAuthTest" time="0.0" classname="com.james.training.tweeter.api.TweeterApiTest">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at com.james.training.tweeter.api.TweeterApiTest.postTweetOAuthTest(TweeterApiTest.java:22)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+... Removed 26 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="getTweetOAuthTest" time="0.001" classname="com.james.training.tweeter.api.TweeterApiTest">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at com.james.training.tweeter.api.TweeterApiTest.getTweetOAuthTest(TweeterApiTest.java:53)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+... Removed 26 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="getJsonRequestExtractAllNamesAndLoggingTest" time="0.0" classname="com.james.training.RestAssuredTestingFramework.AppRunnerJsonTest">
+    <failure type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException
+	at com.james.training.RestAssuredTestingFramework.AppRunnerJsonTest.getJsonRequestExtractAllNamesAndLoggingTest(AppRunnerJsonTest.java:59)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+... Removed 26 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>

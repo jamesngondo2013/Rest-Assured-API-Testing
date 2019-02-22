@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="4" name="Failed suite [Suite]" parallel="methods" data-provider-thread-count="3">
+  <listeners>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="2" verbose="4" name="Test(failed)" parallel="methods">
     <classes>
       <class name="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest">
         <methods>
-          <include name="getData"/>
-          <include name="postJsonRequestAddBookaLLFieldsTest" invocation-numbers="1 3 2 0"/>
+          <include name="postJsonRequestAddBookaLLFieldsTest" invocation-numbers="2 1 0 3"/>
           <include name="deleteBookJsonRequestTest"/>
+          <include name="getDataconfigProperties"/>
         </methods>
       </class> <!-- com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

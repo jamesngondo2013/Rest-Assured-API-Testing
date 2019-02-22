@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="4" name="Failed suite [Suite]" parallel="methods" data-provider-thread-count="3">
+  <listeners>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="2" verbose="4" name="Test(failed)" parallel="methods">
     <classes>
-      <class name="com.james.training.RestAssuredTestingFramework.AppRunnerXMLTest">
+      <class name="com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest">
         <methods>
-          <include name="getXMLRequestAllNamesArrayTest"/>
-          <include name="getData"/>
-        </methods>
-      </class> <!-- com.james.training.RestAssuredTestingFramework.AppRunnerXMLTest -->
-      <class name="com.james.training.RestAssuredExcelDrivenTestingFramework.AppRunnerExcelDrivenTest">
-        <methods>
-          <include name="postJsonRequestAddAllBookFieldsTest" invocation-numbers="1 5 0 4 2 3"/>
-          <include name="getData"/>
+          <include name="postJsonRequestAddBookaLLFieldsTest" invocation-numbers="2 1 0 3"/>
           <include name="deleteBookJsonRequestTest"/>
+          <include name="getDataconfigProperties"/>
         </methods>
-      </class> <!-- com.james.training.RestAssuredExcelDrivenTestingFramework.AppRunnerExcelDrivenTest -->
-      <class name="com.james.training.RestAssuredTestingFramework.AppRunnerJsonTest">
-        <methods>
-          <include name="getData"/>
-          <include name="getJsonRequestExtractAllNamesAndLoggingTest"/>
-        </methods>
-      </class> <!-- com.james.training.RestAssuredTestingFramework.AppRunnerJsonTest -->
+      </class> <!-- com.james.training.RestAssuredMysqlDrivenTestingFramework.AppRunnerMysqlDrivenTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

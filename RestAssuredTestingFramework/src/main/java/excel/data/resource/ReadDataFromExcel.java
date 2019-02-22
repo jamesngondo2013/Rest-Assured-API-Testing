@@ -29,7 +29,7 @@ public class ReadDataFromExcel extends ResourcesPage{
     
     public ReadDataFromExcel () throws IOException
     {
-        getData();
+        getDataconfigProperties();
     }
 
     public static void main (String[] args) throws IOException, EncryptedDocumentException, InvalidFormatException

@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 4, Errors: 0, Skipped: 7, Time elapsed: 2.794 sec <<< FAILURE!
+postJIRAAuthenticationTest(com.james.training.JIRA.api.CreateJIRAIssueTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.james.training.JIRA.api.CreateJIRAIssueTest.postJIRAAuthenticationTest(CreateJIRAIssueTest.java:35)
+
+postTweetOAuthTest(com.james.training.tweeter.api.TweeterApiTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.james.training.tweeter.api.TweeterApiTest.postTweetOAuthTest(TweeterApiTest.java:22)
+
+getTweetOAuthTest(com.james.training.tweeter.api.TweeterApiTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.james.training.tweeter.api.TweeterApiTest.getTweetOAuthTest(TweeterApiTest.java:53)
+
+getJsonRequestExtractAllNamesAndLoggingTest(com.james.training.RestAssuredTestingFramework.AppRunnerJsonTest)  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.james.training.RestAssuredTestingFramework.AppRunnerJsonTest.getJsonRequestExtractAllNamesAndLoggingTest(AppRunnerJsonTest.java:59)
+

@@ -17,29 +17,25 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.DataProvider;
 
 import com.james.training.RestAssuredTestingFramework.BookDetails;
+import com.james.training.RestAssuredTestingFramework.GetDataFromConfigProperties;
 import com.james.training.RestAssuredTestingFramework.HTTPPayloadPage;
 import com.james.training.RestAssuredTestingFramework.ResourcesPage;
 
+import db.data.source.DBConnectionDAO;
 import excel.data.resource.ReadDataFromExcel;
 
 /**
  * @author james.ngondo
  *
  */
-public class RestAssuredCommonDataProvider extends ResourcesPage{
+public class RestAssuredCommonDataProvider extends GetDataFromConfigProperties{
     
-    private static List<BookDetails> bookDetails;
     private static List<String> bookid;
     private ReadDataFromExcel excelData;
-    private  Connection con = null;
-    private String url;
-    private String pass;
-    private String root;
-    
-
+   
     public RestAssuredCommonDataProvider () throws FileNotFoundException, IOException
     {
-       getData();
+    	getDataconfigProperties();
     }
 
     public static void main (String[] args) throws FileNotFoundException, InvalidFormatException, IOException
@@ -52,7 +48,9 @@ public class RestAssuredCommonDataProvider extends ResourcesPage{
     @DataProvider(name="getDBDataAllFields",parallel=true)
     public Object[][] getDBDataAllFields () throws ClassNotFoundException
     {
-        List<BookDetails> bookDetails;
+        DBConnectionDAO dao = DBConnectionDAO.getINSTANCE();
+		
+        List<BookDetails> bookDetails = dao.getData();
         
         ArrayList<String> isbn = new ArrayList<String>();;
         ArrayList<String> aisle = new ArrayList<String>();
@@ -60,38 +58,7 @@ public class RestAssuredCommonDataProvider extends ResourcesPage{
         ArrayList<String> author = new ArrayList<String>();
         
         Object[][] data;
-        
-        bookDetails = new ArrayList<BookDetails>();
-        
-        url = prop.getProperty("SQL_URL");
-        pass= prop.getProperty("SQL_PASS");
-        root = prop.getProperty("SQL_ROOT");
- 
-        try {
-            
-            con = (Connection) DriverManager.getConnection(url, root, pass);
-            if (con != null) {
-                System.out.println("successfully connected to database...");
-                Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery("select * FROM automation.bookdata");
-                while (rs.next()) {
-                   
-                    String db_isbn = rs.getString("isbn");
-                    String db_aisle = rs.getString("aisle");
-                    String db_book_name = rs.getString("book_name");
-                    String db_author = rs.getString("author");
-                    //add books to na list
-                    bookDetails.add(new BookDetails(db_isbn, db_aisle,db_book_name,db_author));     
-                }
-
-            }
-
-        }
-        catch (SQLException e) {
-           
-            e.printStackTrace();
-            System.out.println("cannot connect to database...");
-        }
+       
         //retrieve book details for each book in a list and add them to individual lists
         for (BookDetails val : bookDetails) {
             
@@ -130,41 +97,16 @@ public class RestAssuredCommonDataProvider extends ResourcesPage{
     @DataProvider(name="getBookDataDB",parallel=true)
     public Object[][] getBookDataDB ()
     {
+    	DBConnectionDAO dao = DBConnectionDAO.getINSTANCE();
+ 		
+        List<BookDetails> bookDetails = dao.getData();
+         
         ArrayList<String> isbn = new ArrayList<String>();;
         ArrayList<String> aisle = new ArrayList<String>();
       
         Object[][] data;
         
-        bookDetails = new ArrayList<BookDetails>();
-        
-        url = prop.getProperty("SQL_URL");
-        pass= prop.getProperty("SQL_PASS");
-        root = prop.getProperty("SQL_ROOT");
-
-        try {
-            con = (Connection) DriverManager.getConnection(url, root, pass);
-
-            if (con != null) {
-                System.out.println("successfully connected to database...");
-                Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery("select * FROM automation.bookdata");
-                while (rs.next()) {
-                    //get isbn from db
-                    String db_isbn = rs.getString("isbn");
-                    //get aisle from db
-                    String db_aisle = rs.getString("aisle");
-                    //add each book to a list
-                    bookDetails.add(new BookDetails(db_isbn, db_aisle));
-               
-                }
-
-            }
-
-        }
-        catch (SQLException e) {
-            e.printStackTrace();
-            System.out.println("cannot connect to database...");
-        }
+       
         //retrieve book details for each book in a list and add them to individual lists
         for (BookDetails val : bookDetails) {
               
