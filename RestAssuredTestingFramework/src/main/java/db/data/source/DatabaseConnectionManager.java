@@ -29,7 +29,7 @@ public class DatabaseConnectionManager {
 	        
 		 try {
 	            conn = (Connection)DriverManager.getConnection(
-	                "jdbc:mysql://localhost:3306/automation", "root", "chingotah1980");
+	                "jdbc:mysql://localhost:3306/automation", "root", "chingotah9070");
 	            
 	            if (conn!=null) {
 	                System.out.println("successfully connected to database...");
