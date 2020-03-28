@@ -19,7 +19,7 @@ public class AppRunnerMysqlDrivenTest extends GetDataFromConfigProperties{
 
     private HTTPPayloadPage payload;
 
-  //  @Test(dataProvider = "getBookDataDB", dataProviderClass = RestAssuredCommonDataProvider.class, priority = 1)
+    @Test(dataProvider = "getBookDataDB", dataProviderClass = RestAssuredCommonDataProvider.class, priority = 1)
       public void postJsonRequestAddBookTest(String isbn, String aisle)
       {    
           System.err.println("Running Test=> "+" "+AppRunnerMysqlDrivenTest.class.getName() + this + " -> on thread [" + Thread.currentThread().getId() + "]");
@@ -48,6 +48,27 @@ public class AppRunnerMysqlDrivenTest extends GetDataFromConfigProperties{
           BookDetails.setBookid (bookID);
          
       }
+    
+    @Test(dataProvider="deleteBookID", dataProviderClass = RestAssuredCommonDataProvider.class)
+    public void deleteBookJsonRequestTest(String bookid)
+    {
+       bookid = "J198207"; //B19815502,J198207101,G19811701,S19801100
+       System.err.println("Running Test=> "+" "+AppRunnerMysqlDrivenTest.class.getName() + this + " -> on thread [" + Thread.currentThread().getId() + "]");
+        
+       RestAssured.baseURI = prop.getProperty("RAHUL_SERVER");
+        
+        given().
+        header("Content-Type","application/json").
+                
+                body(HTTPPayloadPage.deleteBookDataPayloadJson(bookid)).   //take 'bookid' to the Delete request    
+        
+        when().
+                post(ResourcesPage.deleteBookJsonDataResourceURL()).
+                
+        then().
+               assertThat().statusCode(200).and().log().all();
+               
+    }
     
     @Test(dataProvider = "getDBDataAllFields", dataProviderClass = RestAssuredCommonDataProvider.class, priority = 1)
     public void postJsonRequestAddBookaLLFieldsTest(String isbn, String aisle,String book_name, String author )
@@ -79,25 +100,6 @@ public class AppRunnerMysqlDrivenTest extends GetDataFromConfigProperties{
   
     }
     
-    @Test(dataProvider="deleteBookID", dataProviderClass = RestAssuredCommonDataProvider.class,dependsOnMethods = "postJsonRequestAddBookaLLFieldsTest", priority=2)
-    public void deleteBookJsonRequestTest(String bookid)
-    {
-       //bookid = B19815502,J198207101,G19811701,S19801100
-       System.err.println("Running Test=> "+" "+AppRunnerMysqlDrivenTest.class.getName() + this + " -> on thread [" + Thread.currentThread().getId() + "]");
-        
-       RestAssured.baseURI = prop.getProperty("RAHUL_SERVER");
-        
-        given().
-        header("Content-Type","application/json").
-                
-                body(HTTPPayloadPage.deleteBookDataPayloadJson(bookid)).   //take 'bookid' to the Delete request    
-        
-        when().
-                post(ResourcesPage.deleteBookJsonDataResourceURL()).
-                
-        then().
-               assertThat().statusCode(200).and().log().all();
-               
-    }
+    
     
 }
