@@ -34,11 +34,18 @@ public class ReusableMethodsPage {
 	        
 	    }
 	    
-	    public static JsonPath rawToJson(Response r)
+	    public static JsonPath rawResponseToJson(Response r)
 	    { 
 	        String respon=r.asString();
 	      //  System.out.println(respon);
 	        JsonPath json=new JsonPath(respon);
+	        return json;
+	    }
+	    
+	    public static JsonPath rawStringToJson(String str)
+	    { 
+	      //  System.out.println(respon);
+	        JsonPath json=new JsonPath(str);
 	        return json;
 	    }
 

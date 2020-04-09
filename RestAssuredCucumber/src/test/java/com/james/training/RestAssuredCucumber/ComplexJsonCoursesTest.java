@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,16 +19,17 @@ import com.james.training.RestAssuredCucumber.placesApi.pojo.AddPlace;
 import com.james.training.RestAssuredCucumber.placesApi.pojo.Location;
 import com.james.training.RestAssuredCucumber.pojo.Api;
 import com.james.training.RestAssuredCucumber.pojo.GetCourse;
+import com.james.training.RestAssuredCucumber.testdata.TestDataBuild;
 import com.james.training.RestAssuredCucumber.utils.Payload;
 import com.james.training.RestAssuredCucumber.utils.ReusableMethodsPage;
-import com.james.training.RestAssuredCucumber.utils.SpecBuilders;
+import com.james.training.RestAssuredCucumber.utils.Utils;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class ComplexJsonCoursesTest {
+public class ComplexJsonCoursesTest extends Utils{
 
 	@Test
 	public void getComplexJsonCourses() {
@@ -129,41 +131,29 @@ public class ComplexJsonCoursesTest {
 	}
 	
 	@Test
-	public void placesApiSerialization() {
+	public void placesApiSerialization() throws IOException {
 		
 		// Given() - All the input details / params tec
 		// when() - I submit API -POST/GET/DELETE/UPDATE
 		// Then - Validate the response
 
-		Location location = new Location();
-		location.setLat(-38.383489);
-		location.setLng(33.426897);
-
-		AddPlace place = new AddPlace();
-		place.setAccuracy(50);
-		place.setAddress("179 The Tramyard, Inchicore, Dublin 8");
-		place.setLocation(location);
-		place.setName("James Keith Chingotah");
-		place.setPhone_number("+353 800 0000 11");
-		place.setWebsite("www.j.ngondo.com");
-		List<String> types = new ArrayList<String>();
-		types.add("shop");
-		types.add("shoe park");
-		place.setTypes(types);
-		place.setLanguage("Chichewa");
 
 		//RestAssured.baseURI = "https://rahulshettyacademy.com";
+		AddPlace data = new AddPlace();
+		data.setName("James");
+		data.setLanguage("Chichewa");
+		data.setAddress("222, Bronx, USA");
 
-		RequestSpecification res = given().spec(SpecBuilders.getRequestSpecification()).log().all()
-										.body(Payload.addPlace());
+		RequestSpecification res = given().spec(getRequestSpecification()).log().all()
+										.body(TestDataBuild.addPlace(data.getName(),data.getLanguage(),data.getAddress()));
 		
 		Response response=		res.when()
 										.post("maps/api/place/add/json").
 									then()
-										.assertThat().log().all().spec(SpecBuilders.getResponseSpecification()).extract().response();
+										.assertThat().log().all().spec(getResponseSpecification()).extract().response();
 
 		System.out.println(response.asString());
-		JsonPath js = ReusableMethodsPage.rawToJson(response); // for parsing Json
+		JsonPath js = ReusableMethodsPage.rawResponseToJson(response); // for parsing Json
 		String placeId = js.getString("place_id");
 
 		System.out.println(placeId);

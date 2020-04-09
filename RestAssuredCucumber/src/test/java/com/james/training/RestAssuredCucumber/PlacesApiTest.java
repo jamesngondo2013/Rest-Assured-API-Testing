@@ -38,7 +38,7 @@ public class PlacesApiTest
 										.header("server", "Apache/2.4.18 (Ubuntu)").extract().response();
 				
 			System.out.println(response.asString());
-			JsonPath js= ReusableMethodsPage.rawToJson(response); //for parsing Json
+			JsonPath js= ReusableMethodsPage.rawResponseToJson(response); //for parsing Json
 			String placeId=js.getString("place_id");
 				
 			System.out.println(placeId);
@@ -64,7 +64,7 @@ public class PlacesApiTest
 								then()
 									.assertThat().log().all().statusCode(200).extract().response();
 	
-	JsonPath js1=ReusableMethodsPage.rawToJson(getPlaceResponse);
+	JsonPath js1=ReusableMethodsPage.rawResponseToJson(getPlaceResponse);
 	String actualAddress =js1.getString("address");
 	System.out.println(actualAddress);
 	Assert.assertEquals(actualAddress, newAddress); // pass

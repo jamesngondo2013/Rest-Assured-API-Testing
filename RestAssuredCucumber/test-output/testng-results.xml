@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-08T00:41:31 BST" name="Default suite" finished-at="2020-04-08T00:41:35 BST" duration-ms="3655">
+  <suite started-at="2020-04-10T00:50:30 BST" name="Default suite" finished-at="2020-04-10T00:50:35 BST" duration-ms="4359">
     <groups>
     </groups>
-    <test started-at="2020-04-08T00:41:31 BST" name="Default test" finished-at="2020-04-08T00:41:35 BST" duration-ms="3655">
+    <test started-at="2020-04-10T00:50:30 BST" name="Default test" finished-at="2020-04-10T00:50:35 BST" duration-ms="4359">
       <class name="com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest">
-        <test-method signature="getComplexJsonCourses()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@59af0466]" started-at="2020-04-08T00:41:31 BST" name="getComplexJsonCourses" finished-at="2020-04-08T00:41:33 BST" duration-ms="1547" status="PASS">
+        <test-method signature="getComplexJsonCourses()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@1a482e36]" started-at="2020-04-10T00:50:30 BST" name="getComplexJsonCourses" finished-at="2020-04-10T00:50:32 BST" duration-ms="1622" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getComplexJsonCourses -->
-        <test-method signature="placesApiSerialization()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@59af0466]" started-at="2020-04-08T00:41:33 BST" name="placesApiSerialization" finished-at="2020-04-08T00:41:34 BST" duration-ms="1849" status="PASS">
+        <test-method signature="placesApiSerialization()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@1a482e36]" started-at="2020-04-10T00:50:32 BST" name="placesApiSerialization" finished-at="2020-04-10T00:50:35 BST" duration-ms="2639" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placesApiSerialization -->
-        <test-method signature="testPOJODeserializationJsonCourses()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@59af0466]" started-at="2020-04-08T00:41:34 BST" name="testPOJODeserializationJsonCourses" finished-at="2020-04-08T00:41:35 BST" duration-ms="224" status="PASS">
+        <test-method signature="testPOJODeserializationJsonCourses()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@1a482e36]" started-at="2020-04-10T00:50:35 BST" name="testPOJODeserializationJsonCourses" finished-at="2020-04-10T00:50:35 BST" duration-ms="48" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPOJODeserializationJsonCourses -->
