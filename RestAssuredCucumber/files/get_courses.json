@@ -1,0 +1,44 @@
+{
+	"instructor": "James Ngondo",
+	"url": "http://www.jamesngondo.com",
+	"services": "project support",
+	"expertise": "Auomation",
+	"courses": {
+		"webAutomation": [
+			{
+				"courseTitle": "Selenium WebDrive Java",
+				"price": "50"	
+			},
+			{
+				"courseTitle": "Cypress",
+				"price": "40"	
+			},
+			{
+				"courseTitle": "Protractor",
+				"price": "50"	
+			}
+		],
+		"api": [
+		
+			{
+				"courseTitle": "Rest Assured Java",
+				"price": "50"	
+			},
+			{
+				"courseTitle": "SoupUI web services testing",
+				"price": "40"	
+			}
+		],
+		"mobile": [
+		
+			{
+				"courseTitle": "Appium Testing",
+				"price": "50"	
+			}
+			
+		]
+	
+	},
+	"linkedIn": "http://www.linkedin.com/james-ngondo/"
+
+}
