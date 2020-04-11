@@ -27,7 +27,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "user calls \"AddPlaceAPI\" with \"Post\" http request",
+  "name": "user calls \"addPlaceAPI\" with \"POST\" http request",
   "keyword": "When "
 });
 formatter.step({
@@ -45,8 +45,13 @@ formatter.step({
   "name": "\"scope\" in response body is \"APP\"",
   "keyword": "And "
 });
+formatter.step({
+  "line": 12,
+  "name": "verify that place_id created maps to \"\u003cname\u003e\" using \"getPlaceAPI\"",
+  "keyword": "And "
+});
 formatter.examples({
-  "line": 13,
+  "line": 14,
   "name": "",
   "description": "",
   "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;",
@@ -57,7 +62,7 @@ formatter.examples({
         "language",
         "address"
       ],
-      "line": 14,
+      "line": 15,
       "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;1"
     },
     {
@@ -66,7 +71,7 @@ formatter.examples({
         "Ndebele",
         "Balaka, Malawi"
       ],
-      "line": 15,
+      "line": 16,
       "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;2"
     },
     {
@@ -75,7 +80,7 @@ formatter.examples({
         "Chichewa",
         "Lilongwe, Malawi"
       ],
-      "line": 16,
+      "line": 17,
       "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;3"
     },
     {
@@ -84,14 +89,14 @@ formatter.examples({
         "English",
         "Blantyre, Malawi"
       ],
-      "line": 17,
+      "line": 18,
       "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;4"
     }
   ],
   "keyword": "Examples"
 });
 formatter.scenario({
-  "line": 15,
+  "line": 16,
   "name": "Verify if Place is being added successfully using AddPlaceAPI",
   "description": "",
   "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;2",
@@ -110,7 +115,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "user calls \"AddPlaceAPI\" with \"Post\" http request",
+  "name": "user calls \"addPlaceAPI\" with \"POST\" http request",
   "keyword": "When "
 });
 formatter.step({
@@ -126,6 +131,14 @@ formatter.step({
 formatter.step({
   "line": 11,
   "name": "\"scope\" in response body is \"APP\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "verify that place_id created maps to \"James Ngondo\" using \"getPlaceAPI\"",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "And "
 });
 formatter.match({
@@ -146,24 +159,24 @@ formatter.match({
   "location": "AddPlaceStepDefinition.add_Place_Payload_with(String,String,String)"
 });
 formatter.result({
-  "duration": 1701847100,
+  "duration": 1664484200,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "AddPlaceAPI",
+      "val": "addPlaceAPI",
       "offset": 12
     },
     {
-      "val": "Post",
+      "val": "POST",
       "offset": 31
     }
   ],
   "location": "AddPlaceStepDefinition.user_calls_with_http_request(String,String)"
 });
 formatter.result({
-  "duration": 2389950201,
+  "duration": 1638404100,
   "status": "passed"
 });
 formatter.match({
@@ -176,7 +189,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.the_API_call_is_successful_with_status_code(int)"
 });
 formatter.result({
-  "duration": 4172800,
+  "duration": 3278700,
   "status": "passed"
 });
 formatter.match({
@@ -193,7 +206,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 24049299,
+  "duration": 523624700,
   "status": "passed"
 });
 formatter.match({
@@ -210,11 +223,28 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 10650199,
+  "duration": 16848300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "James Ngondo",
+      "offset": 38
+    },
+    {
+      "val": "getPlaceAPI",
+      "offset": 59
+    }
+  ],
+  "location": "AddPlaceStepDefinition.verify_that_place_id_created_maps_to_using(String,String)"
+});
+formatter.result({
+  "duration": 849663000,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 16,
+  "line": 17,
   "name": "Verify if Place is being added successfully using AddPlaceAPI",
   "description": "",
   "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;3",
@@ -233,7 +263,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "user calls \"AddPlaceAPI\" with \"Post\" http request",
+  "name": "user calls \"addPlaceAPI\" with \"POST\" http request",
   "keyword": "When "
 });
 formatter.step({
@@ -249,6 +279,14 @@ formatter.step({
 formatter.step({
   "line": 11,
   "name": "\"scope\" in response body is \"APP\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "verify that place_id created maps to \"Dennis Gombe\" using \"getPlaceAPI\"",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "And "
 });
 formatter.match({
@@ -269,24 +307,24 @@ formatter.match({
   "location": "AddPlaceStepDefinition.add_Place_Payload_with(String,String,String)"
 });
 formatter.result({
-  "duration": 6566200,
+  "duration": 2964600,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "AddPlaceAPI",
+      "val": "addPlaceAPI",
       "offset": 12
     },
     {
-      "val": "Post",
+      "val": "POST",
       "offset": 31
     }
   ],
   "location": "AddPlaceStepDefinition.user_calls_with_http_request(String,String)"
 });
 formatter.result({
-  "duration": 4222459800,
+  "duration": 734389000,
   "status": "passed"
 });
 formatter.match({
@@ -299,7 +337,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.the_API_call_is_successful_with_status_code(int)"
 });
 formatter.result({
-  "duration": 100400,
+  "duration": 85500,
   "status": "passed"
 });
 formatter.match({
@@ -316,7 +354,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 12507300,
+  "duration": 8870700,
   "status": "passed"
 });
 formatter.match({
@@ -333,11 +371,28 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 11026200,
+  "duration": 8822900,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Dennis Gombe",
+      "offset": 38
+    },
+    {
+      "val": "getPlaceAPI",
+      "offset": 59
+    }
+  ],
+  "location": "AddPlaceStepDefinition.verify_that_place_id_created_maps_to_using(String,String)"
+});
+formatter.result({
+  "duration": 783390600,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 17,
+  "line": 18,
   "name": "Verify if Place is being added successfully using AddPlaceAPI",
   "description": "",
   "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;4",
@@ -356,7 +411,7 @@ formatter.step({
 });
 formatter.step({
   "line": 8,
-  "name": "user calls \"AddPlaceAPI\" with \"Post\" http request",
+  "name": "user calls \"addPlaceAPI\" with \"POST\" http request",
   "keyword": "When "
 });
 formatter.step({
@@ -372,6 +427,14 @@ formatter.step({
 formatter.step({
   "line": 11,
   "name": "\"scope\" in response body is \"APP\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "verify that place_id created maps to \"Gilby Gombe\" using \"getPlaceAPI\"",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "And "
 });
 formatter.match({
@@ -392,24 +455,24 @@ formatter.match({
   "location": "AddPlaceStepDefinition.add_Place_Payload_with(String,String,String)"
 });
 formatter.result({
-  "duration": 5136601,
+  "duration": 2690400,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "AddPlaceAPI",
+      "val": "addPlaceAPI",
       "offset": 12
     },
     {
-      "val": "Post",
+      "val": "POST",
       "offset": 31
     }
   ],
   "location": "AddPlaceStepDefinition.user_calls_with_http_request(String,String)"
 });
 formatter.result({
-  "duration": 1106840300,
+  "duration": 725887500,
   "status": "passed"
 });
 formatter.match({
@@ -422,7 +485,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.the_API_call_is_successful_with_status_code(int)"
 });
 formatter.result({
-  "duration": 110100,
+  "duration": 72400,
   "status": "passed"
 });
 formatter.match({
@@ -439,7 +502,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 13725600,
+  "duration": 8728400,
   "status": "passed"
 });
 formatter.match({
@@ -456,7 +519,24 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 14435000,
+  "duration": 8308300,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Gilby Gombe",
+      "offset": 38
+    },
+    {
+      "val": "getPlaceAPI",
+      "offset": 58
+    }
+  ],
+  "location": "AddPlaceStepDefinition.verify_that_place_id_created_maps_to_using(String,String)"
+});
+formatter.result({
+  "duration": 769075200,
   "status": "passed"
 });
 });
