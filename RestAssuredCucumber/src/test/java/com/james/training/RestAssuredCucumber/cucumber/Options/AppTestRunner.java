@@ -9,6 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
   features = "src/test/java/com/james/training/RestAssuredCucumber/features", 
   glue = { "com/james/training/RestAssuredCucumber/stepDefinitions" },
+  //tags= {"@deletePlace"},
   dryRun=false,
   strict=true,
   monochrome=true,

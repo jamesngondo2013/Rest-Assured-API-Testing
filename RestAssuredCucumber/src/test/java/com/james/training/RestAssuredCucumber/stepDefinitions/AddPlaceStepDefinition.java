@@ -3,6 +3,7 @@ package com.james.training.RestAssuredCucumber.stepDefinitions;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,16 +26,16 @@ public class AddPlaceStepDefinition extends Utils{
 	
 	private RequestSpecification res;
 	private Response response;
-	private JsonPath js;
+	public static String placeId;
 	
 	@Given("^Add Place Payload with \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
-	public void add_Place_Payload_with(String name, String language, String address) throws Throwable {
+	public void add_Place_Payload_with(String name, String language, String address) throws IOException {
 		res = given().spec(getRequestSpecification())
 				  .body(TestDataBuild.addPlace(name,language,address));
 	}
 
 	@When("^user calls \"([^\"]*)\" with \"([^\"]*)\" http request$")
-	public void user_calls_with_http_request(String apiResource, String httpMethod) throws Throwable {
+	public void user_calls_with_http_request(String apiResource, String httpMethod) throws IOException {
 		//get enum values
 		APIResources resource = APIResources.valueOf(apiResource);
 		
@@ -63,13 +64,13 @@ public class AddPlaceStepDefinition extends Utils{
 	}
 
 	@Then("^the API call is successful with status code (\\d+)$")
-	public void the_API_call_is_successful_with_status_code(int statusCode) throws Throwable {
+	public void the_API_call_is_successful_with_status_code(int statusCode) throws IOException {
 	   
 		assertEquals(response.getStatusCode(), statusCode);
 	}
 
 	@Then("^\"([^\"]*)\" in response body is \"([^\"]*)\"$")
-	public void in_response_body_is(String jsonkey, String expectedVal) throws Throwable {
+	public void in_response_body_is(String jsonkey, String expectedVal) throws IOException {
 		
 		String actualVal = getJsonPathKeyValue(response, jsonkey);
 		//assert
@@ -77,9 +78,9 @@ public class AddPlaceStepDefinition extends Utils{
 	}
 	
 	@Then("^verify that place_id created maps to \"([^\"]*)\" using \"([^\"]*)\"$")
-	public void verify_that_place_id_created_maps_to_using(String expectedName, String apiResource) throws Throwable {
+	public void verify_that_place_id_created_maps_to_using(String expectedName, String apiResource) throws IOException {
 		
-		String placeId = getJsonPathKeyValue(response, "place_id");
+		placeId = getJsonPathKeyValue(response, "place_id");
 		
 		res = given().spec(getRequestSpecification()).queryParam("place_id", placeId);
 		
@@ -88,6 +89,14 @@ public class AddPlaceStepDefinition extends Utils{
 		String actualName = getJsonPathKeyValue(response, "name");
 		System.out.println("ActualName :" + actualName);
 		assertEquals(actualName,expectedName);
+	}
+	
+	//Delete Place Scenario
+	@Given("^delete place payload$")
+	public void delete_place_payload() throws IOException {
+		
+		res = given().spec(getRequestSpecification()).body(TestDataBuild.deletePlaceDataPayload(placeId));
+		
 	}
 
 }

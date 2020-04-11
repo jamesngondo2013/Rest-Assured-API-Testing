@@ -32,4 +32,15 @@ public class TestDataBuild {
 
 		return place;
 	}
+	
+	 //delete data
+    public static String deletePlaceDataPayload(String placeId)
+    {
+        String body ="{"+
+                "\"place_id\":\""+placeId+"\""+                         
+            "}";
+        
+        return body;
+    }
+	
 }

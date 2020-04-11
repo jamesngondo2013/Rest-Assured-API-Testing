@@ -18,7 +18,13 @@ formatter.scenarioOutline({
   "description": "",
   "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi",
   "type": "scenario_outline",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 5,
+      "name": "@addPlace"
+    }
+  ]
 });
 formatter.step({
   "line": 7,
@@ -101,7 +107,13 @@ formatter.scenario({
   "description": "",
   "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;2",
   "type": "scenario",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 5,
+      "name": "@addPlace"
+    }
+  ]
 });
 formatter.step({
   "line": 7,
@@ -159,7 +171,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.add_Place_Payload_with(String,String,String)"
 });
 formatter.result({
-  "duration": 1664484200,
+  "duration": 2481456600,
   "status": "passed"
 });
 formatter.match({
@@ -176,7 +188,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.user_calls_with_http_request(String,String)"
 });
 formatter.result({
-  "duration": 1638404100,
+  "duration": 2909835100,
   "status": "passed"
 });
 formatter.match({
@@ -189,7 +201,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.the_API_call_is_successful_with_status_code(int)"
 });
 formatter.result({
-  "duration": 3278700,
+  "duration": 11486000,
   "status": "passed"
 });
 formatter.match({
@@ -206,7 +218,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 523624700,
+  "duration": 1392071000,
   "status": "passed"
 });
 formatter.match({
@@ -223,7 +235,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 16848300,
+  "duration": 33827600,
   "status": "passed"
 });
 formatter.match({
@@ -240,7 +252,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.verify_that_place_id_created_maps_to_using(String,String)"
 });
 formatter.result({
-  "duration": 849663000,
+  "duration": 1108180700,
   "status": "passed"
 });
 formatter.scenario({
@@ -249,7 +261,13 @@ formatter.scenario({
   "description": "",
   "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;3",
   "type": "scenario",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 5,
+      "name": "@addPlace"
+    }
+  ]
 });
 formatter.step({
   "line": 7,
@@ -307,7 +325,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.add_Place_Payload_with(String,String,String)"
 });
 formatter.result({
-  "duration": 2964600,
+  "duration": 10284600,
   "status": "passed"
 });
 formatter.match({
@@ -324,7 +342,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.user_calls_with_http_request(String,String)"
 });
 formatter.result({
-  "duration": 734389000,
+  "duration": 982461000,
   "status": "passed"
 });
 formatter.match({
@@ -337,7 +355,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.the_API_call_is_successful_with_status_code(int)"
 });
 formatter.result({
-  "duration": 85500,
+  "duration": 112900,
   "status": "passed"
 });
 formatter.match({
@@ -354,7 +372,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 8870700,
+  "duration": 16153300,
   "status": "passed"
 });
 formatter.match({
@@ -371,7 +389,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 8822900,
+  "duration": 24670000,
   "status": "passed"
 });
 formatter.match({
@@ -388,7 +406,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.verify_that_place_id_created_maps_to_using(String,String)"
 });
 formatter.result({
-  "duration": 783390600,
+  "duration": 954153100,
   "status": "passed"
 });
 formatter.scenario({
@@ -397,7 +415,13 @@ formatter.scenario({
   "description": "",
   "id": "validating-place-api\u0027s;verify-if-place-is-being-added-successfully-using-addplaceapi;;4",
   "type": "scenario",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 5,
+      "name": "@addPlace"
+    }
+  ]
 });
 formatter.step({
   "line": 7,
@@ -455,7 +479,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.add_Place_Payload_with(String,String,String)"
 });
 formatter.result({
-  "duration": 2690400,
+  "duration": 7023300,
   "status": "passed"
 });
 formatter.match({
@@ -472,7 +496,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.user_calls_with_http_request(String,String)"
 });
 formatter.result({
-  "duration": 725887500,
+  "duration": 851754200,
   "status": "passed"
 });
 formatter.match({
@@ -485,7 +509,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.the_API_call_is_successful_with_status_code(int)"
 });
 formatter.result({
-  "duration": 72400,
+  "duration": 169700,
   "status": "passed"
 });
 formatter.match({
@@ -502,7 +526,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 8728400,
+  "duration": 28188600,
   "status": "passed"
 });
 formatter.match({
@@ -519,7 +543,7 @@ formatter.match({
   "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
 });
 formatter.result({
-  "duration": 8308300,
+  "duration": 25578500,
   "status": "passed"
 });
 formatter.match({
@@ -536,7 +560,99 @@ formatter.match({
   "location": "AddPlaceStepDefinition.verify_that_place_id_created_maps_to_using(String,String)"
 });
 formatter.result({
-  "duration": 769075200,
+  "duration": 1023901400,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 171200,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 22,
+  "name": "Verify if Delete Place functionality is working",
+  "description": "",
+  "id": "validating-place-api\u0027s;verify-if-delete-place-functionality-is-working",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 21,
+      "name": "@deletePlace"
+    }
+  ]
+});
+formatter.step({
+  "line": 23,
+  "name": "delete place payload",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 24,
+  "name": "user calls \"deletePlaceAPI\" with \"POST\" http request",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 25,
+  "name": "the API call is successful with status code 200",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 26,
+  "name": "\"status\" in response body is \"OK\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "AddPlaceStepDefinition.delete_place_payload()"
+});
+formatter.result({
+  "duration": 3651800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "deletePlaceAPI",
+      "offset": 12
+    },
+    {
+      "val": "POST",
+      "offset": 34
+    }
+  ],
+  "location": "AddPlaceStepDefinition.user_calls_with_http_request(String,String)"
+});
+formatter.result({
+  "duration": 978790400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "200",
+      "offset": 44
+    }
+  ],
+  "location": "AddPlaceStepDefinition.the_API_call_is_successful_with_status_code(int)"
+});
+formatter.result({
+  "duration": 227800,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "status",
+      "offset": 1
+    },
+    {
+      "val": "OK",
+      "offset": 30
+    }
+  ],
+  "location": "AddPlaceStepDefinition.in_response_body_is(String,String)"
+});
+formatter.result({
+  "duration": 27542000,
   "status": "passed"
 });
 });
