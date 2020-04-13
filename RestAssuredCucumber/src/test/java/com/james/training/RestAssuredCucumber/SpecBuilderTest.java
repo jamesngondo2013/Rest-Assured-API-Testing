@@ -54,8 +54,8 @@ public class SpecBuilderTest extends Utils{
 		
 		//Get Place
 		
-	Response getPlaceResponse=	given().spec(getPlaceIdRequestSpecification("place_id", placeId)).
-								when()
+	Response getPlaceResponse=	given().spec(getRequestSpecification()).queryParam("place_id", placeId)
+								.when()
 									.get(Payload.getPlace()).
 								then()
 									.assertThat().log().all().spec(getPlaceResponseSpecification()).extract().response();

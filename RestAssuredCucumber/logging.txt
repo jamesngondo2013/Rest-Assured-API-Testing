@@ -16,18 +16,18 @@ Body:
         "lng": 33.426897
     },
     "accuracy": 50,
-    "name": "James Ngondo",
+    "name": "James",
     "phone_number": "+353 800 0000 11",
-    "address": "Balaka, Malawi",
+    "address": "222, Bronx, USA",
     "types": [
         "shop",
         "shoe park"
     ],
     "website": "www.j.ngondo.com",
-    "language": "Ndebele"
+    "language": "Chichewa"
 }
 HTTP/1.1 200 OK
-Date: Sat, 11 Apr 2020 03:05:59 GMT
+Date: Mon, 13 Apr 2020 02:36:50 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,48 +40,10 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "028cb699a52755836ba86bbd2f565d65",
+    "place_id": "680a754ed8288df52490b5890ddc616b",
     "scope": "APP",
-    "reference": "732b0574891df9c98be4a81542e8c56d732b0574891df9c98be4a81542e8c56d",
-    "id": "732b0574891df9c98be4a81542e8c56d"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=028cb699a52755836ba86bbd2f565d65
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=028cb699a52755836ba86bbd2f565d65
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Sat, 11 Apr 2020 03:06:02 GMT
-Server: Apache/2.4.18 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 236
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383489",
-        "longitude": "33.426897"
-    },
-    "accuracy": "50",
-    "name": "James Ngondo",
-    "phone_number": "+353 800 0000 11",
-    "address": "Balaka, Malawi",
-    "types": "shop,shoe park",
-    "website": "www.j.ngondo.com",
-    "language": "Ndebele"
+    "reference": "48e135e7ef83d8a080ed24c9f65ee02b48e135e7ef83d8a080ed24c9f65ee02b",
+    "id": "48e135e7ef83d8a080ed24c9f65ee02b"
 }
 Request method:	POST
 Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
@@ -97,22 +59,22 @@ Multiparts:		<none>
 Body:
 {
     "location": {
-        "lat": -38.383489,
-        "lng": 33.426897
+        "lat": -38.383494,
+        "lng": 33.427362
     },
     "accuracy": 50,
-    "name": "Dennis Gombe",
-    "phone_number": "+353 800 0000 11",
-    "address": "Lilongwe, Malawi",
+    "name": "Rahul Shetty Academy",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "29, side layout, cohen 09",
     "types": [
-        "shop",
-        "shoe park"
+        "shoe park",
+        "shop"
     ],
-    "website": "www.j.ngondo.com",
-    "language": "Chichewa"
+    "website": "http://rahulshettyacademy.com",
+    "language": "French-IN"
 }
 HTTP/1.1 200 OK
-Date: Sat, 11 Apr 2020 03:06:03 GMT
+Date: Mon, 13 Apr 2020 02:36:54 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -125,51 +87,13 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "770f76ddde9bd45e6c8dad38cc4a2df8",
+    "place_id": "905bbeacc9bf696ae38f58d6cd99536b",
     "scope": "APP",
-    "reference": "9cf1da9bdeab8dae5411f02341ad1e269cf1da9bdeab8dae5411f02341ad1e26",
-    "id": "9cf1da9bdeab8dae5411f02341ad1e26"
+    "reference": "94595b08225cfeb069bd34298da7ff0394595b08225cfeb069bd34298da7ff03",
+    "id": "94595b08225cfeb069bd34298da7ff03"
 }
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=770f76ddde9bd45e6c8dad38cc4a2df8
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=770f76ddde9bd45e6c8dad38cc4a2df8
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Sat, 11 Apr 2020 03:06:04 GMT
-Server: Apache/2.4.18 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 239
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383489",
-        "longitude": "33.426897"
-    },
-    "accuracy": "50",
-    "name": "Dennis Gombe",
-    "phone_number": "+353 800 0000 11",
-    "address": "Lilongwe, Malawi",
-    "types": "shop,shoe park",
-    "website": "www.j.ngondo.com",
-    "language": "Chichewa"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Request method:	PUT
+Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
@@ -181,46 +105,31 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "location": {
-        "lat": -38.383489,
-        "lng": 33.426897
-    },
-    "accuracy": 50,
-    "name": "Gilby Gombe",
-    "phone_number": "+353 800 0000 11",
-    "address": "Blantyre, Malawi",
-    "types": [
-        "shop",
-        "shoe park"
-    ],
-    "website": "www.j.ngondo.com",
-    "language": "English"
+    "place_id": "905bbeacc9bf696ae38f58d6cd99536b",
+    "address": "Summer Walk, Africa",
+    "key": "qaclick123"
 }
 HTTP/1.1 200 OK
-Date: Sat, 11 Apr 2020 03:06:05 GMT
+Date: Mon, 13 Apr 2020 02:36:55 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
+Content-Length: 38
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
 
 {
-    "status": "OK",
-    "place_id": "beeb8890ffb7ebde37108dcaab923db3",
-    "scope": "APP",
-    "reference": "c0f47e88b08f71b2cef85f8cae68f2d4c0f47e88b08f71b2cef85f8cae68f2d4",
-    "id": "c0f47e88b08f71b2cef85f8cae68f2d4"
+    "msg": "Address successfully updated"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=beeb8890ffb7ebde37108dcaab923db3
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=905bbeacc9bf696ae38f58d6cd99536b
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=beeb8890ffb7ebde37108dcaab923db3
+				place_id=905bbeacc9bf696ae38f58d6cd99536b
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -229,57 +138,27 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Sat, 11 Apr 2020 03:06:06 GMT
+Date: Mon, 13 Apr 2020 02:36:55 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 237
+Content-Length: 268
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
 
 {
     "location": {
-        "latitude": "-38.383489",
-        "longitude": "33.426897"
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
     },
     "accuracy": "50",
-    "name": "Gilby Gombe",
-    "phone_number": "+353 800 0000 11",
-    "address": "Blantyre, Malawi",
-    "types": "shop,shoe park",
-    "website": "www.j.ngondo.com",
-    "language": "English"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "beeb8890ffb7ebde37108dcaab923db3"
-}
-HTTP/1.1 200 OK
-Date: Sat, 11 Apr 2020 03:06:07 GMT
-Server: Apache/2.4.18 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK"
+    "name": "Rahul Shetty Academy",
+    "phone_number": "(+91) 983 893 3937",
+    "address": "Summer Walk, Africa",
+    "types": "shoe park,shop",
+    "website": "http://rahulshettyacademy.com",
+    "language": "French-IN"
 }

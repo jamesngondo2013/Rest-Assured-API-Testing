@@ -13,7 +13,8 @@ import cucumber.api.junit.Cucumber;
   dryRun=false,
   strict=true,
   monochrome=true,
-  plugin = { "pretty", "html:target/cucumber-html-report" })
+  format = {"pretty", "json:target/jsonReports/cucumber-report.json"},
+  plugin = {"json:target/jsonReports/cucumber-report.json"})
 public class AppTestRunner {
 
 }

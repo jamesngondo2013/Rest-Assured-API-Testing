@@ -27,8 +27,8 @@ import io.restassured.response.Response;
 
 public class OAuthTest {
 
-	@Test
-	public void main() throws InterruptedException {
+	//@Test
+	public void mainTest() throws InterruptedException {
 		String[] courseTitles = { "Selenium Webdriver Java", "Cypress", "Protractor" };
 
 		// url for authorization - paste in browser

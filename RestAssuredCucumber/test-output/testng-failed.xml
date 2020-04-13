@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest">
+      <class name="com.james.training.RestAssuredCucumber.OAuthTest">
         <methods>
-          <include name="placesApiSerialization"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest -->
+      </class> <!-- com.james.training.RestAssuredCucumber.OAuthTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
