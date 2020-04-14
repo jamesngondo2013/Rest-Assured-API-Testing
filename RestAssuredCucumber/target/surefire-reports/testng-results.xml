@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="11265" started-at="2020-04-13T03:36:44 IST" finished-at="2020-04-13T03:36:56 IST">
+  <suite name="Surefire suite" duration-ms="11937" started-at="2020-04-13T18:43:14 IST" finished-at="2020-04-13T18:43:26 IST">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="11265" started-at="2020-04-13T03:36:44 IST" finished-at="2020-04-13T03:36:56 IST">
+    <test name="Surefire test" duration-ms="11937" started-at="2020-04-13T18:43:14 IST" finished-at="2020-04-13T18:43:26 IST">
       <class name="com.james.training.RestAssuredCucumber.SpecBuilderTest">
-        <test-method status="PASS" signature="placesApi()[pri:0, instance:com.james.training.RestAssuredCucumber.SpecBuilderTest@3dd4520b]" name="placesApi" duration-ms="2692" started-at="2020-04-13T03:36:53 IST" finished-at="2020-04-13T03:36:56 IST">
+        <test-method status="PASS" signature="placesApi()[pri:0, instance:com.james.training.RestAssuredCucumber.SpecBuilderTest@5a8e6209]" name="placesApi" duration-ms="2636" started-at="2020-04-13T18:43:23 IST" finished-at="2020-04-13T18:43:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placesApi -->
       </class> <!-- com.james.training.RestAssuredCucumber.SpecBuilderTest -->
       <class name="com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest">
-        <test-method status="PASS" signature="getComplexJsonCourses()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@47ef968d]" name="getComplexJsonCourses" duration-ms="1870" started-at="2020-04-13T03:36:44 IST" finished-at="2020-04-13T03:36:46 IST">
+        <test-method status="PASS" signature="getComplexJsonCourses()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@57536d79]" name="getComplexJsonCourses" duration-ms="2709" started-at="2020-04-13T18:43:14 IST" finished-at="2020-04-13T18:43:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getComplexJsonCourses -->
-        <test-method status="PASS" signature="placesApiSerialization()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@47ef968d]" name="placesApiSerialization" duration-ms="3887" started-at="2020-04-13T03:36:46 IST" finished-at="2020-04-13T03:36:50 IST">
+        <test-method status="PASS" signature="placesApiSerialization()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@57536d79]" name="placesApiSerialization" duration-ms="4003" started-at="2020-04-13T18:43:17 IST" finished-at="2020-04-13T18:43:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placesApiSerialization -->
-        <test-method status="PASS" signature="testPOJODeserializationJsonCourses()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@47ef968d]" name="testPOJODeserializationJsonCourses" duration-ms="100" started-at="2020-04-13T03:36:50 IST" finished-at="2020-04-13T03:36:50 IST">
+        <test-method status="PASS" signature="testPOJODeserializationJsonCourses()[pri:0, instance:com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest@57536d79]" name="testPOJODeserializationJsonCourses" duration-ms="72" started-at="2020-04-13T18:43:21 IST" finished-at="2020-04-13T18:43:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPOJODeserializationJsonCourses -->
       </class> <!-- com.james.training.RestAssuredCucumber.ComplexJsonCoursesTest -->
       <class name="com.james.training.RestAssuredCucumber.PlacesApiTest">
-        <test-method status="PASS" signature="placesApi()[pri:0, instance:com.james.training.RestAssuredCucumber.PlacesApiTest@23e028a9]" name="placesApi" duration-ms="2660" started-at="2020-04-13T03:36:50 IST" finished-at="2020-04-13T03:36:53 IST">
+        <test-method status="PASS" signature="placesApi()[pri:0, instance:com.james.training.RestAssuredCucumber.PlacesApiTest@3b0143d3]" name="placesApi" duration-ms="2468" started-at="2020-04-13T18:43:21 IST" finished-at="2020-04-13T18:43:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placesApi -->

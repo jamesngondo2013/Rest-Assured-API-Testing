@@ -7,6 +7,11 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -70,5 +75,45 @@ public class PlacesApiTest
 	Assert.assertEquals(actualAddress, newAddress); // pass
 	//Assert.assertEquals(actualAddress, "Pacific ocean"); //fails
 	//Cucumber Junit, Testng
+	}
+	
+	@Test
+	public void placesApiJsonHashMap() {
+		
+		RestAssured.baseURI= "https://rahulshettyacademy.com";
+		
+		Map<String, Object> mapLocation = new HashMap<>();
+		mapLocation.put("lat", 12);
+		mapLocation.put("lng", -32);
+		Map<String, Object> jsonMapPlacesApiLocation = new HashMap<>();
+		jsonMapPlacesApiLocation.put("location", mapLocation);
+		jsonMapPlacesApiLocation.put("accuracy", 50);
+		jsonMapPlacesApiLocation.put("name", "Bishop Shanks");
+		jsonMapPlacesApiLocation.put("phone_number", "+353 89951000");
+		jsonMapPlacesApiLocation.put("address", "90 Killen, Ireland");
+		
+		List<String> types = new ArrayList<String>();
+		types.add("shoe park");
+		types.add("shop");
+		jsonMapPlacesApiLocation.put("types", types);
+		jsonMapPlacesApiLocation.put("website", "www.techonologywolves.com");
+		jsonMapPlacesApiLocation.put("language","Tumbuka");
+		
+		Response response  =        given()
+										.log().all()
+										.queryParam("key", "qaclick123")
+										.header("Content-Type","application/json")
+										.body(jsonMapPlacesApiLocation).
+									when()
+										.post("maps/api/place/add/json").
+									then()
+										.assertThat().statusCode(200).body("scope", equalTo("APP"))
+										.header("server", "Apache/2.4.18 (Ubuntu)").extract().response();
+				
+			System.out.println(response.asString());
+			JsonPath js= ReusableMethodsPage.rawResponseToJson(response); //for parsing Json
+			String placeId=js.getString("place_id");
+				
+			System.out.println(placeId);
 	}
 }

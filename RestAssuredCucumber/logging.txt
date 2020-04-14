@@ -27,7 +27,7 @@ Body:
     "language": "Chichewa"
 }
 HTTP/1.1 200 OK
-Date: Mon, 13 Apr 2020 02:36:50 GMT
+Date: Mon, 13 Apr 2020 17:43:21 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,10 +40,10 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "680a754ed8288df52490b5890ddc616b",
+    "place_id": "302c8594e049f086fee7dc3e77c4b776",
     "scope": "APP",
-    "reference": "48e135e7ef83d8a080ed24c9f65ee02b48e135e7ef83d8a080ed24c9f65ee02b",
-    "id": "48e135e7ef83d8a080ed24c9f65ee02b"
+    "reference": "4c450f41a9b30aae1471d234c261eb6d4c450f41a9b30aae1471d234c261eb6d",
+    "id": "4c450f41a9b30aae1471d234c261eb6d"
 }
 Request method:	POST
 Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
@@ -74,7 +74,7 @@ Body:
     "language": "French-IN"
 }
 HTTP/1.1 200 OK
-Date: Mon, 13 Apr 2020 02:36:54 GMT
+Date: Mon, 13 Apr 2020 17:43:24 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -87,10 +87,10 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "905bbeacc9bf696ae38f58d6cd99536b",
+    "place_id": "70277808b1bfa7e98e6631aa05642b64",
     "scope": "APP",
-    "reference": "94595b08225cfeb069bd34298da7ff0394595b08225cfeb069bd34298da7ff03",
-    "id": "94595b08225cfeb069bd34298da7ff03"
+    "reference": "dbe62606536ec8a5c15b1fa98281142cdbe62606536ec8a5c15b1fa98281142c",
+    "id": "dbe62606536ec8a5c15b1fa98281142c"
 }
 Request method:	PUT
 Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
@@ -105,12 +105,12 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "place_id": "905bbeacc9bf696ae38f58d6cd99536b",
+    "place_id": "70277808b1bfa7e98e6631aa05642b64",
     "address": "Summer Walk, Africa",
     "key": "qaclick123"
 }
 HTTP/1.1 200 OK
-Date: Mon, 13 Apr 2020 02:36:55 GMT
+Date: Mon, 13 Apr 2020 17:43:25 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -125,11 +125,11 @@ Content-Type: application/json;charset=UTF-8
     "msg": "Address successfully updated"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=905bbeacc9bf696ae38f58d6cd99536b
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=70277808b1bfa7e98e6631aa05642b64
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=905bbeacc9bf696ae38f58d6cd99536b
+				place_id=70277808b1bfa7e98e6631aa05642b64
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -138,7 +138,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Mon, 13 Apr 2020 02:36:55 GMT
+Date: Mon, 13 Apr 2020 17:43:26 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
